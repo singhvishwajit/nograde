@@ -1,0 +1,629 @@
+/******************** Global Styles ********************/
+
+body {
+  background: #fafafa;
+  color: #333333;
+  margin-top: 5rem;
+  height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #3d3e44;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+ul {
+  margin: 0;
+}
+
+.bg-steel {
+  background-color: #fafafa;
+}
+
+.site-header .navbar-brand {
+  color: #E03131;
+  line-height: 1;
+  font-weight: bold;
+}
+
+.site-header .navbar-brand:hover {
+  color: #E03131;
+}
+
+.site-header .navbar-nav .nav-link {
+  color: #4e4e53;
+}
+
+.site-header .navbar-nav .nav-link:hover {
+  color: #E03131;
+  text-decoration: underline;
+}
+
+.site-header .navbar-nav .nav-link:active {
+  font-weight: bold;
+}
+
+.dropdown-item:active {
+  background-color: #E03131;
+  color: white;
+}
+
+.jumbotron {
+  border-radius: 0;
+}
+
+.card {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.btn-info {
+  background-color: #E03131; /* rgba(224, 49, 49, 1) */
+  border: none;
+  border-radius: 100rem;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1;
+  padding: 1rem 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-info:hover {
+  background-color: #E03131;
+  border: none;
+  opacity: 0.8;
+}
+
+.btn-secondary {
+  background-color: #fafafa; /* rgba(224, 49, 49, 1) */
+  border: none;
+  color: #4e4e53;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background-color: #fafafa; /* rgba(224, 49, 49, 1) */
+  border: 1px solid #4e4e53;
+  color: #4e4e53;
+  cursor: pointer;
+}
+
+.content-section {
+  background: #ffffff;
+  padding: 10px 20px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  flex-basis: 30%;
+}
+
+.article-title {
+  color: #444444;
+}
+
+a.article-title:hover {
+  color: #428bca;
+  text-decoration: none;
+}
+
+.article-content {
+  white-space: pre-line;
+}
+
+.article-img {
+  height: 65px;
+  width: 65px;
+  margin-right: 16px;
+}
+
+.article-metadata {
+  padding-bottom: 1px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #e3e3e3
+}
+
+.article-metadata a:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+.article-svg {
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+}
+
+.account-img {
+  height: 125px;
+  width: 125px;
+  margin-right: 20px;
+  margin-bottom: 16px;
+}
+
+.navbar-img {
+  height: 30px;
+  width: 30px;
+  margin-right: 10px;
+}
+
+.navbar-nav {
+  align-items: center;
+}
+
+.account-heading {
+  font-size: 2.5rem;
+}
+
+/******************** Footer ********************/
+
+.footer-row {
+  border-top: 1px ridge rgba(0,0,0,.125);
+  padding-top: 2rem;
+  background-color: #29292C;
+  color: #b5b5c0;
+  padding-bottom: 2rem;
+}
+
+.footer-row h5 {
+  color: #ffffff;
+}
+
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  padding-top: 2rem;
+}
+
+.footer-wrapper a {
+  color: #b5b5c0;
+  margin-bottom: 0.5rem;
+}
+
+.footer-wrapper a:hover {
+  color: #E03131;
+}
+
+.footer-column-one {
+  padding-right: 7.5rem;
+}
+
+.footer-column-two {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-column-three {
+  display: flex;
+  flex-direction: column;
+}
+
+.social-media-links a {
+  color: #b5b5c0;
+  padding-right: 20px;
+  text-decoration: none;
+}
+
+.social-media-links a:hover {
+  color: #E03131;
+}
+
+.copyright a {
+  color: #b5b5c0;
+}
+
+.copyright a:hover {
+  color: #E03131;
+}
+
+/******************** Home Page ********************/
+
+.wrapper-welcome {
+  display: flex;
+  padding-bottom: 40px;
+  min-height: 100%;
+}
+
+.wrapper-welcome-half {
+  width: 50%;
+  padding: 12.5rem 0;
+}
+
+.wrapper-welcome-half h1 {
+  font-size: 2.625em;
+  font-weight: 500;
+  line-height: 1.25;
+  font-color: #3d3e44;
+  margin-bottom: 1.5rem;
+  margin: 0, 0, 0.75rem;
+}
+
+.wrapper-welcome-half-image {
+  background-image: url('/static/wrapper-welcome-half.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 50%;
+}
+
+.features-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5rem;
+}
+
+.feature1 {
+  text-align: center;
+}
+
+.feature2 {
+  text-align: center;
+}
+
+.feature3 {
+  text-align: center;
+}
+
+/******************** Blog Page ********************/
+
+.blog-wrapper-header h1 {
+  font-size: 2.625em;
+  font-weight: 500;
+  line-height: 1.25;
+  font-color: #3d3e44;
+  margin-bottom: 1.5rem;
+}
+
+.blog-wrapper-header p {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  font-color: #454547;
+}
+
+.blog-wrapper-header ul {
+  margin-bottom: 1.5rem;
+}
+
+.blog-wrapper-header ul li {
+  margin-right: 1rem;
+}
+
+.blog-wrapper-header ul li a {
+  color: #3d3e44;
+  text-decoration: underline;
+}
+
+.blog-wrapper-header ul li a:hover {
+  color: #E03131;
+}
+
+.category-filters {
+  padding-left: 0;
+}
+
+.category-filters li {
+  display: inline-block;
+}
+
+.highlight-post {
+  display: flex;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+a.highlight-post {
+  text-decoration: none;
+}
+
+.highlight-post-thumbnail {
+  width: 50%;
+}
+
+.highlight-post-thumbnail img {
+  width: 100%;
+}
+
+.highlight-post-half-content {
+  width: 50%;
+  padding: 2rem;
+}
+
+.container .highlight-post-half-content {
+  text-decoration: none;
+  color: #454547;
+}
+
+.container-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.blog-wrapper {
+  width: 32%;
+  border: 1px solid rgba(0, 0, 0, .125);
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  box-shadow: 0 15px 35px rgba(126,87,88,.1), 0 5px 15px rgba(0,0,0,.07);
+}
+
+.thumbnail {
+  height: 30vh;
+  width: 100%;
+}
+
+.blog-wrapper .blog-body {
+  padding: 1rem;
+}
+
+.container-wrapper .blog-wrapper {
+  text-decoration: none;
+  color: #454547;
+}
+
+/******************** Post Detail Page ********************/
+
+.post-detail-container-wrapper {
+  display: flex;
+  align-items: top;
+}
+
+.post-detail-wrapper {
+  width: 75%;
+  margin-bottom: 2rem;
+}
+
+.post-detail-margin {
+  width: 25%;
+  padding-right: 1rem;
+  margin-top: 8rem;
+}
+
+.article-title {
+  margin-top: 2rem;
+  line-height: 2;
+}
+
+.post-meta {
+  margin-bottom: 4rem;
+}
+
+.post-meta img {
+  border: 2px solid #E03131
+}
+
+.post-detail-thumbnail {
+  width: 100%;
+  height: 50vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: 1rem;
+}
+
+.blog-body {
+  padding-left: 0;
+  padding-right: 2rem;
+}
+
+/******************** Courses Page ********************/
+
+.courses-wrapper-header h1 {
+  font-size: 2.625em;
+  font-weight: 500;
+  line-height: 1.25;
+  font-color: #3d3e44;
+}
+
+.courses-wrapper-header p {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  font-color: #454547;
+}
+
+.courses-wrapper-header ul {
+  margin-bottom: 1.5rem;
+}
+
+.courses-wrapper-header ul li {
+  margin-right: 1rem;
+}
+
+.courses-wrapper-header ul li a {
+  color: #3d3e44;
+  text-decoration: underline;
+}
+
+.courses-wrapper-header ul li a:hover {
+  color: #E03131;
+}
+
+.course-wrapper {
+  width: 32%;
+  border: 1px solid rgba(0, 0, 0, .125);
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  box-shadow: 0 15px 35px rgba(126,87,88,.1), 0 5px 15px rgba(0,0,0,.07);
+}
+
+.course-body {
+  padding: 1rem;
+}
+
+.container-wrapper .course-wrapper {
+  text-decoration: none;
+  color: #454547;
+}
+
+/******************** Books Page ********************/
+
+.books-banner {
+  background-image: linear-gradient(rgba(0, 50, 75, 0.5), rgba(0, 50, 75, 0.5)), url('/static/books.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 7.5rem 0;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.books-banner h1 {
+  color: white;
+}
+
+.book-img {
+  height: 30vh;
+}
+
+.books-wrapper {
+  width: 30%;
+  height: 425px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  box-shadow: 0 15px 35px rgba(126,87,88,.1), 0 5px 15px rgba(0,0,0,.07);
+}
+
+.books-wrapper img {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.books-body {
+  padding: 1rem;
+  position: absolute;
+  bottom: 0px;
+  color: black;
+}
+
+/******************** Contact Page ********************/
+
+.contact-banner {
+  background-image: linear-gradient(rgba(0, 50, 75, 0.5), rgba(0, 50, 75, 0.5)), url('/static/contact.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 7.5rem 0;
+  color: white;
+}
+
+.contact-banner h1 {
+  color: white;
+}
+
+.contact-wrapper {
+  display: flex;
+  margin-bottom: 2rem;
+  justify-content: space-around;
+}
+
+.contact-form-wrapper {
+  width: 100%;
+}
+
+.contact-form-wrapper h1 {
+  text-align: center;
+}
+
+/******************** Course Detail Page ********************/
+
+.course-detail-banner {
+  display: flex;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+
+.course-detail-banner-thumbnail {
+  width: 50%;
+}
+
+.course-detail-banner-thumbnail img {
+  width: 100%;
+}
+
+.course-detail-half-content {
+  width: 50%;
+  padding-right: 5rem;
+}
+
+.course-detail-wrapper {
+  display: flex;
+
+}
+
+.course-detail-index {
+  width: 20%;
+}
+
+.course-detail-content {
+  width: 70%;
+}
+
+.course-syllabus-wrapper {
+  display: flex;
+}
+
+/******************** Newsletter Page ********************/
+
+.newsletter-wrapper {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.newsletter-form-wrapper {
+  border: 1px solid rgba(0, 0, 0, .125);
+  box-shadow: 0 15px 35px rgba(126,87,88,.1), 0 5px 15px rgba(0,0,0,.07);
+  padding: 2rem;
+  width: 50%;
+}
+
+/******************** Guide Details Page ********************/
+.guide-body {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+}
+
+/******************** Login Page ********************/
+
+.login-wrapper {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.login-form-wrapper {
+  border: 1px solid rgba(0, 0, 0, .125);
+  box-shadow: 0 15px 35px rgba(126,87,88,.1), 0 5px 15px rgba(0,0,0,.07);
+  padding: 2rem;
+  width: 50%;
+}
+
+/******************** Register Page ********************/
+
+.register-wrapper {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.register-form-wrapper {
+  border: 1px solid rgba(0, 0, 0, .125);
+  box-shadow: 0 15px 35px rgba(126,87,88,.1), 0 5px 15px rgba(0,0,0,.07);
+  padding: 2rem;
+  width: 50%;
+}

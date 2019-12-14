@@ -1,0 +1,136 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link href="{% static 'tinymce/css/prism.css' %}" rel="stylesheet">
+    
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/main.css' %}">
+
+    <!-- Font Awesome script -->
+	<script src="https://kit.fontawesome.com/a28ba7e7ad.js"></script>
+
+	{% if title %}
+		<title>Vishwajit Singh - {{ title }}</title>
+	{% else %}
+		<title>Vishwajit Singh</title>
+	{% endif %}	
+</head>
+<body>
+	<header class="site-header">
+	  	<nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+		    <div class="container">
+		      <a class="navbar-brand mr-4" href="{% url 'blog-home' %}">No Grade Education</a>
+		      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+		      <span class="navbar-toggler-icon"></span>
+		      </button>
+		      <div class="collapse navbar-collapse" id="navbarToggle">
+		        <div class="navbar-nav mr-auto">
+		          <a class="nav-item nav-link" href="{% url 'learn-courses' %}">Courses</a>
+		        </div>
+		        <!-- Navbar Right Side -->
+		        <div class="navbar-nav">
+		        	{% if user.is_authenticated %}
+		        		<div class="dropdown">
+							<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							    <img class="rounded-circle navbar-img" src="{{ user.profile.image.url }}">{{ user.username }}
+							</button>
+							<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+							    <a class="dropdown-item" href="{% url 'profile' %}">Update Profile</a>
+							    <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+							</div>
+						</div>
+		        	{% else %}
+		          		<a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
+		          		<a class="btn btn-info" href="{% url 'register' %}">Register</a>
+		          	{% endif %}
+		        </div>
+		      </div>
+		    </div>
+	 	</nav>
+	</header>
+	
+	<main role="main">
+		<div class="container">
+			<div class="row">
+			    <div class="col">
+				    {% if messages %}
+				    	{% for message in messages %}
+				    		<div class="alert alert-{{ message.tags }}">
+				    			{{ message }}
+				    		</div>
+				    	{% endfor %}
+				    {% endif %}	
+				</div>
+			</div>	
+		</div>
+		{% block content %}{% endblock %}
+	</main>
+	
+	
+	<!-- footer -->
+	<footer>
+		<div class="footer-row">
+			<div class="container">
+				<div class="footer-wrapper">
+					<div class="footer-column-one">
+						<h5>No Grade Education</h5>
+						<br>
+						<p>Education for curious and self-motivated learners.</p>
+								
+					</div>
+
+					<div class="footer-column-two">
+						<h5>About Us</h5>
+						<br>
+						<a href="{% url 'blog-about' %}">About</a>
+						<a href="{% url 'learn-courses' %}">Courses</a>
+						<a href="#">Donate</a>
+						<a href="{% url 'blog-contact' %}">Contact Us</a>	
+					</div>
+
+					<div class="footer-column-three">
+						<h5>Resources</h5>
+						<br>
+						<a href="{% url 'blog-blog' %}">Blog</a>
+						<a href="{% url 'blog-books' %}">Books</a>
+						<a href="{% url 'learn-guides' %}">Guides</a>	
+						<a href="{% url 'blog-newsletter' %}">Newsletter</a>
+					</div>
+
+				    <div class="social-media-links">
+				    	<h5>Follow Us</h5>
+				    	<br>
+				      	<a href="https://twitter.com/vishwajitsingh/" target="_blank">
+				        	<i class="fab fa-twitter"></i>
+				      	</a>
+				      	<a href="https://www.linkedin.com/in/singhvishwajit/" target="_blank">
+				        	<i class="fab fa-linkedin-in"></i>
+				      	</a>
+			      		<a href="https://github.com/singhvishwajit/" target="_blank">
+			        		<i class="fab fa-github-square"></i>
+			      		</a>
+				    </div>
+				</div>
+			   	<div class="copyright">
+			      	<p>© 2019 Copyright | <a href="#">Privacy</a> | <a href="#">Terms of Use</a></p>
+			    </div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- Prism JS -->
+	<script src="{% static 'tinymce/js/prism.js' %}"></script>
+</body>
+</html>

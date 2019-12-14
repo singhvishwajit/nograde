@@ -1,0 +1,24 @@
+{% extends 'blog/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+	<div class="container">
+		<div class="blog-thumbnail">
+	    	<img class="post-detail-thumbnail" src="{{ object.thumbnail.url }}"/>
+	    </div>
+		<div class="post-detail-container-wrapper">
+			<div class="post-detail-margin">
+				<img class="rounded-circle article-img" src="{{ post.author.profile.image.url }}">
+				<p class="post-meta">{{ object.date_posted |date:"F d, Y" }} by {{ object.author }}</p>
+			</div>
+			<article class="post-detail-wrapper">
+				<h2 class="article-title">{{ object.title }}</h2>
+	    		<div class="blog-body">
+			    	<p class="article-content">{{ object.content|safe }}</p>
+	    		</div>
+			</article>
+		</div>
+	</div>
+{% endblock content %}
+
+
+				

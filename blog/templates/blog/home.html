@@ -1,0 +1,62 @@
+{% extends 'blog/base.html' %}
+{% load static from staticfiles %}
+{% block content %}
+	<div class="container">
+		<header class="wrapper-welcome">
+			<div class="wrapper-welcome-half">
+				<h2>Education for curious learners.</h2>
+				<p>Teach yourself skills to better navigate your career and life.</p>
+				<a href="{% url 'learn-courses' %}" class="btn btn-info">Start learning today</a>
+			</div>
+			<div class="wrapper-welcome-half-image">
+			</div>
+		</header>
+	</div>
+	
+	<div class="container">
+		<div class="jumbotron learn">
+			<div class="card">
+				<div class="card-body">
+				 	<h3 class="card-title">Web Development</h3>
+					<p class="card-text">Build something for the web.</p>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-body">
+				 	<h3 class="card-title">Entrepreneurship</h3>
+					<p class="card-text">Start a product or service based business.</p>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-body">
+				 	<h3 class="card-title">Personal Growth</h3>
+					<p class="card-text">Grow yourself to actualize your potentials.</p>
+				</div>
+			</div>
+			<a href="{% url 'learn-courses' %}" class="btn btn-info">Go To Courses</a>
+		</div>
+	</div>
+		
+
+	<div class="container">
+		<div class="features-wrapper">
+			<div class="feature1">
+				<img src="{% static 'diamond.png' %}">
+				<h5>Easy to understand content</h5>
+				<p>Content for students with no prior experience.</p>
+			</div>
+			
+			<div class="feature2">
+				<img src="{% static 'briefcase.png' %}">
+				<h5>Project based learning</h5>
+				<p>Learn concepts by applying them in real world projects.</p>
+			</div>
+			
+			<div class="feature3">
+				<img src="{% static 'laptop.png' %}">
+				<h5>Mentorship</h5>
+				<p>Prepare for job or starting a business with our 1:1 mentorship.</p>
+			</div>
+		</div>	
+	</div>
+{% endblock content %}

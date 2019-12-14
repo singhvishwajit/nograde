@@ -1,0 +1,10 @@
+{% extends 'blog/base.html' %}
+{% load static from staticfiles %}
+{% block content %}
+	<div class="container">
+		<h2>{{ guide.guide_title }}</h2>
+		<div class="guide-body">
+			{{ guide.guide_details | safe}}
+		</div>
+	</div>
+{% endblock content %}

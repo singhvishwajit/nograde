@@ -1,0 +1,21 @@
+{% extends 'blog/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+	<div class="container">
+		<div class="contact-wrapper">
+			<div class="contact-form-wrapper">
+				<h1>Contact Us</h1>
+				<br>
+				<form method="POST">
+					{% csrf_token %}
+					<fieldset class="form-group">
+						{{ form|crispy }}	
+					</fieldset>
+					<div class="form-group">
+						<button class="btn btn-info" type="submit">Message</button>
+					</div>
+				</form>
+			</div>	
+		</div>
+	</div>
+{% endblock content %}

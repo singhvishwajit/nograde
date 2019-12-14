@@ -1,0 +1,69 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+	<div class="books-banner">
+		<div class="container">
+			<h1>Books</h1>	
+			<p>Browse below our curated list of further readings for your web development, entrepreneurship and personal growth journey.</p>
+		</div>
+	</div>
+
+
+	<div class="container">
+		<br>
+		<h3>Web Development</h3>
+		<hr>
+		<div class="container-wrapper">
+			{% for books in books_web_development %}
+				<a class="books-wrapper" href="{{ books.amazon_url }}">
+		    		<img class="thumbnail" src="{{ books.thumbnail.url }}"/>
+		    		<div class="books-body">
+		    			<p class="article-title"><strong>{{ books.title }}</strong></p>
+				    	<p class="article-content">{{ books.author }}</p>
+		    		</div>
+				</a>
+			{% endfor %}
+		</div>	
+
+		<h3>Web Design</h3>
+		<hr>
+		<div class="container-wrapper">
+			{% for books in books_web_design %}
+				<a class="books-wrapper" href="{{ books.amazon_url }}">
+		    		<img class="thumbnail" src="{{ books.thumbnail.url }}"/>
+		    		<div class="books-body">
+		    			<p class="article-title"><strong>{{ books.title }}</strong></p>
+				    	<p class="article-content">{{ books.author }}</p>
+		    		</div>
+				</a>
+			{% endfor %}
+		</div>	
+
+		<h3>Entrepreneurship</h3>
+		<hr>
+		<div class="container-wrapper">
+			{% for books in books_entrepreneurship %}
+				<a class="books-wrapper" href="{{ books.amazon_url }}">
+		    		<img class="thumbnail" src="{{ books.thumbnail.url }}"/>
+		    		<div class="books-body">
+		    			<p class="article-title"><strong>{{ books.title }}</strong></p>
+				    	<p class="article-content">{{ books.author }}</p>
+		    		</div>
+				</a>
+			{% endfor %}
+		</div>	
+
+		<h3>Personal Growth</h3>
+		<hr>
+		<div class="container-wrapper">
+			{% for books in books_personal_growth %}
+				<a class="books-wrapper" href="{{ books.amazon_url }}">
+		    		<img class="thumbnail" src="{{ books.thumbnail.url }}"/>
+		    		<div class="books-body">
+		    			<p class="article-title"><strong>{{ books.title }}</strong></p>
+				    	<p class="article-content">{{ books.author }}</p>
+		    		</div>
+				</a>
+			{% endfor %}
+		</div>	
+	</div>
+{% endblock content %}

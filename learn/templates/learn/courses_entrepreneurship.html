@@ -1,0 +1,34 @@
+{% extends 'blog/base.html' %}
+{% load static from staticfiles %}
+{% block content %}
+	<div class="container">
+		<header class="courses-wrapper-header">
+			<h1>Courses</h1>
+			<p>Browse all the available courses on web development, entrepreneurship and personal growth.</p>
+			<ul class="category-filters">
+				<li><a href="{% url 'learn-courses' %}">All</a></li>
+				<li><a href="{% url 'learn-courses-web-dev' %}">Web Development</a></li>
+				<li><a href="{% url 'learn-courses-web-design' %}">Web Design</a></li>
+				<li><a href="{% url 'learn-courses-entrepreneurship' %}">Entrepreneurship</a></li>
+				<li><a href="{% url 'learn-courses-personal-growth' %}">Personal Growth</a></li>
+			</ul>
+		</header>
+	</div>
+
+	<div class="container">
+		<h3>Entrepreneurship</h3>
+		<div class="container-wrapper">
+			{% for course in courses_entrepreneurship %}
+				<a class="course-wrapper" href="{% url 'learn-course-details' course.slug %}">
+				  	<div class="course-thumbnail">
+		    			<img class="thumbnail" src="{{ course.thumbnail.url }}"/>
+		    		</div>
+		    		<div class="course-body">
+		    			<h5>{{ course.course_title }}</h5>
+				    	<p class="article-content">{{ course.course_details|safe }}</p>
+		    		</div>
+				 </a>
+			{% endfor %}
+		</div>
+	</div>
+{% endblock content %}
