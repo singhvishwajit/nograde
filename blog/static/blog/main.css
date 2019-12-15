@@ -504,19 +504,6 @@ a.highlight-post {
 
 /******************** Contact Page ********************/
 
-.contact-banner {
-  background-image: linear-gradient(rgba(0, 50, 75, 0.5), rgba(0, 50, 75, 0.5)), url('/static/contact.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 7.5rem 0;
-  color: white;
-}
-
-.contact-banner h1 {
-  color: white;
-}
-
 .contact-wrapper {
   display: flex;
   margin-bottom: 2rem;
