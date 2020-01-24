@@ -6,43 +6,10 @@
 			<div class="course-detail-half-content">
 				<h2><a href="#">{{ course.course_title }}</a></h2>
 				<p>{{ course.course_details | safe }}</p>
-				<a class="btn btn-info" href="#">Start</a>
 			</div>
 			<div class="course-detail-banner-thumbnail">
 				<img src="{{ course.thumbnail.url }}"/>
 			</div>
 		</article>
-	</div>
-	
-		
-	<div class="container">
-		
-		<h2><center>Syllabus</center></h2>
-
-		<div class="container-wrapper">
-			{% for syllabus in syllabus %}
-				<div class="card" style="width: 22rem;">
-		  			<div class="card-body">
-		    			<h6 class="card-title mb-4 text-muted">{{ syllabus.lesson_num }}</h6>
-		    			<h5 class="card-subtitle mb-2">{{ syllabus.lesson_title }}</h5>
-		    			<p class="card-text">{{ syllabus.lesson_overview }}</p>
-		    		</div>
-				</div>
-			{% endfor %}
-		</div>
-
-		<div class="container-wrapper">
-			{% for course in related_courses %}
-				<article class="course-wrapper">
-				  	<div class="course-thumbnail">
-		    			<img class="thumbnail" src="{{ course.thumbnail.url }}"/>
-		    		</div>
-		    		<div class="course-body">
-		    			<h5><a class="article-title" href="{% url 'learn-course-details' course.slug %}">{{ course.course_title }}</a></h5>
-				    	<p class="article-content">{{ course.course_details|safe }}</p>
-		    		</div>
-				</article>
-			{% endfor %}
-		</div>	
 	</div>
 {% endblock content %}

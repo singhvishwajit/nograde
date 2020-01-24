@@ -4,49 +4,19 @@
 	<div class="container">
 		<header class="courses-wrapper-header">
 			<h1>Courses</h1>
-			<p>Browse all the available courses on web development, entrepreneurship and personal growth.</p>
+			<p>Browse all the available courses on being enterprising, learning how to think, personal growth and understanding your wiring.</p>
 			<ul class="category-filters">
 				<li><a href="{% url 'learn-courses' %}">All</a></li>
-				<li><a href="{% url 'learn-courses-web-dev' %}">Web Development</a></li>
-				<li><a href="{% url 'learn-courses-web-design' %}">Web Design</a></li>
-				<li><a href="{% url 'learn-courses-entrepreneurship' %}">Entrepreneurship</a></li>
+				<li><a href="{% url 'learn-courses-entrepreneurship' %}">Being enterprising</a></li>
+				<li><a href="{% url 'learn-courses-philosophy' %}">Learning how to think</a></li>
+				<li><a href="{% url 'learn-courses-psychology' %}">How are you wired?</a></li>
 				<li><a href="{% url 'learn-courses-personal-growth' %}">Personal Growth</a></li>
 			</ul>
 		</header>
 	</div>
 
-	<div class="container">
-		<h3>Web Development</h3>
-		<div class="container-wrapper">
-			{% for course in courses_web_development %}
-				<a class="course-wrapper" href="{% url 'learn-course-details' course.slug %}">
-				  	<div class="course-thumbnail">
-		    			<img class="thumbnail" src="{{ course.thumbnail.url }}"/>
-		    		</div>
-		    		<div class="course-body">
-		    			<h5>{{ course.course_title }}</h5>
-				    	<p class="article-content">{{ course.course_details|safe }}</p>
-		    		</div>
-				</a>
-			{% endfor %}
-		</div>	
-
-		<h3>Web Design</h3>
-		<div class="container-wrapper">
-			{% for course in courses_web_design %}
-				<a class="course-wrapper" href="{% url 'learn-course-details' course.slug %}">
-				  	<div class="course-thumbnail">
-		    			<img class="thumbnail" src="{{ course.thumbnail.url }}"/>
-		    		</div>
-		    		<div class="course-body">
-		    			<h5>{{ course.course_title }}</h5>
-				    	<p class="article-content">{{ course.course_details|safe }}</p>
-		    		</div>
-				 </a>
-			{% endfor %}
-		</div>	
-
-		<h3>Entrepreneurship</h3>	
+	<div class="container">	
+		<h3>Being enterprising</h3>	
 		<div class="container-wrapper">
 			{% for course in courses_entrepreneurship %}
 				<a class="course-wrapper" href="{% url 'learn-course-details' course.slug %}">
@@ -62,13 +32,48 @@
 		</div>	
 			
 		<h3>Personal Growth</h3>	
-		{% for course in courses_personal_growth %}
-			<article class="media content-section">
-			  	<div class="media-body">
-			    	<h5><a class="article-title" href="{% url 'learn-course-details' course.slug %}">{{ course.course_title }}</a></h5>
-			    	<p class="article-content">{{ course.course_details|safe }}</p>
-			  	</div>
-			</article>
-		{% endfor %}
+		<div class="container-wrapper">
+			{% for course in courses_personal_growth %}
+				<a class="course-wrapper" href="{% url 'learn-course-details' course.slug %}">
+					<div class="course-thumbnail">
+						<img class="thumbnail" src="{{ course.thumbnail.url }}"/>
+					</div>
+					<div class="course-body">
+						<h5>{{ course.course_title }}</h5>
+					    <p class="article-content">{{ course.course_details|safe }}</p>
+					</div>
+				</a>
+			{% endfor %}
+		</div>
+
+		<h3>Learning how to think</h3>
+		<div class="container-wrapper">
+			{% for course in courses_philosophy %}
+				<a class="course-wrapper" href="{% url 'learn-course-details' course.slug %}">
+					<div class="course-thumbnail">
+						<img class="thumbnail" src="{{ course.thumbnail.url }}"/>
+					</div>
+					<div class="course-body">
+						<h5>{{ course.course_title }}</h5>
+					    <p class="article-content">{{ course.course_details|safe }}</p>
+					</div>
+				</a>
+			{% endfor %}
+		</div>
+
+		<h3>How are you wired?</h3>
+		<div class="container-wrapper">
+			{% for course in courses_psychology %}
+				<a class="course-wrapper" href="{% url 'learn-course-details' course.slug %}">
+					<div class="course-thumbnail">
+						<img class="thumbnail" src="{{ course.thumbnail.url }}"/>
+					</div>
+					<div class="course-body">
+						<h5>{{ course.course_title }}</h5>
+					    <p class="article-content">{{ course.course_details|safe }}</p>
+					</div>
+				</a>
+			{% endfor %}
+		</div>	
 	</div>
 {% endblock content %}

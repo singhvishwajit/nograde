@@ -11,6 +11,8 @@ def courses(request):
 	'courses_personal_growth': Course.objects.filter(paths=2),
 	'courses_entrepreneurship': Course.objects.filter(paths=3),
 	'courses_web_design': Course.objects.filter(paths=4),
+	'courses_philosophy': Course.objects.filter(paths=5),
+	'courses_psychology': Course.objects.filter(paths=6),
 	'title': 'Courses' 
 	}
 	return render(request, 'learn/courses.html', context)	
@@ -61,3 +63,16 @@ def courses_personal_growth(request):
 	'courses_personal_growth': Course.objects.filter(paths=2),
 	}
 	return render(request, 'learn/courses_personal_growth.html', context)
+
+
+def courses_philosophy(request):
+	context = {
+	'courses_philosophy': Course.objects.filter(paths=5),
+	}
+	return render(request, 'learn/courses_philosophy.html', context)
+
+def courses_psychology(request):
+	context = {
+	'courses_psychology': Course.objects.filter(paths=6),
+	}
+	return render(request, 'learn/courses_psychology.html', context)

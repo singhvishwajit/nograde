@@ -1,7 +1,7 @@
 /******************** Global Styles ********************/
 
 body {
-  background: #fafafa;
+  background: #ffffff;
   color: #333333;
   margin-top: 5rem;
   height: 100%;
@@ -18,14 +18,19 @@ ul {
   margin: 0;
 }
 
+.navbar {
+  height: 8rem;
+}
+
 .bg-steel {
-  background-color: #fafafa;
+  background-color: #ffffff;
 }
 
 .site-header .navbar-brand {
   color: #E03131;
   line-height: 1;
   font-weight: bold;
+  font-size: x-large;
 }
 
 .site-header .navbar-brand:hover {
@@ -187,10 +192,6 @@ a.article-title:hover {
   color: #E03131;
 }
 
-.footer-column-one {
-  padding-right: 7.5rem;
-}
-
 .footer-column-two {
   display: flex;
   flex-direction: column;
@@ -221,10 +222,14 @@ a.article-title:hover {
 
 /******************** Home Page ********************/
 
+.homepage-wrapper {
+  margin-bottom: 5rem;
+}
+
 .wrapper-welcome {
   display: flex;
-  padding-bottom: 40px;
-  min-height: 100%;
+  margin-top: 3rem;
+  margin-bottom: 4rem;
 }
 
 .wrapper-welcome-half {
@@ -242,33 +247,69 @@ a.article-title:hover {
 }
 
 .wrapper-welcome-half-image {
-  background-image: url('/static/wrapper-welcome-half.png');
+  background-image: url('/static/education.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   width: 50%;
 }
 
-.features-wrapper {
+.below-wrapper-content {
+  margin-bottom: 6rem;
+  padding-top: 2rem;
+  border: 1px solid #E03131;
+}
+
+.topics-heading h3 {
+  text-align: center;
+  line-height: 1.25em;
+  font-size: 2rem;
+  padding-top: 2rem;
+  margin-bottom: 24px;
+}
+
+.topics-heading p {
+  text-align: center;
+  padding-bottom: 4rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.topics {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 5rem;
+  height: 22rem;
+}
+
+.topics p{
+  text-align: center;
+  font-weight: bold;
 }
 
 .feature1 {
+  height: 10rem;
   text-align: center;
-  padding: 1rem;
+  width: 24%;
 }
 
 .feature2 {
+  width: 24%;
+  height: 10rem;
   text-align: center;
-  padding: 1rem;
 }
 
 .feature3 {
+  width: 24%;
+  height: 10rem;
   text-align: center;
-  padding: 1rem;
 }
+
+.feature4 {
+  width: 24%;
+  height: 10rem;
+  text-align: center;
+}
+
 
 /******************** Blog Page ********************/
 
@@ -343,7 +384,7 @@ a.highlight-post {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 2rem;
+  margin-bottom: 6rem;
   margin-top: 2rem;
 }
 
@@ -415,11 +456,18 @@ a.highlight-post {
 
 /******************** Courses Page ********************/
 
+.courses-wrapper-header {
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
+
+
 .courses-wrapper-header h1 {
   font-size: 2.625em;
   font-weight: 500;
   line-height: 1.25;
   font-color: #3d3e44;
+  margin-bottom: 6rem;
 }
 
 .courses-wrapper-header p {
@@ -471,6 +519,7 @@ a.highlight-post {
   background-size: cover;
   padding: 7.5rem 0;
   color: white;
+  margin-top: 4rem;
   margin-bottom: 2rem;
 }
 
@@ -565,9 +614,10 @@ a.highlight-post {
 .newsletter-wrapper {
   display: flex;
   justify-content: space-around;
-  margin-bottom: 2rem;
+  margin-bottom: 6rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
+  margin-top: 6rem;
 }
 
 .newsletter-form-wrapper {
@@ -589,9 +639,10 @@ a.highlight-post {
 .login-wrapper {
   display: flex;
   justify-content: space-around;
-  margin-bottom: 2rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
+  margin-top: 6rem;
+  margin-bottom: 6rem;
 }
 
 .login-form-wrapper {
@@ -606,7 +657,8 @@ a.highlight-post {
 .register-wrapper {
   display: flex;
   justify-content: space-around;
-  margin-bottom: 2rem;
+  margin-top: 6rem;
+  margin-bottom: 6rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
@@ -616,4 +668,38 @@ a.highlight-post {
   box-shadow: 0 15px 35px rgba(126,87,88,.1), 0 5px 15px rgba(0,0,0,.07);
   padding: 2rem;
   width: 50%;
+}
+
+
+/******************** About Page ********************/
+
+.about-wrapper {
+  display: flex;
+  margin-bottom: 6rem;
+}
+
+.about-section {
+  width: 70%;
+  padding-right: 4rem;
+}
+
+.about-heading {
+  font-size: 2.625em;
+  font-weight: 500;
+  line-height: 1.25;
+  font-color: #3d3e44;
+  margin-bottom: 6rem;
+  margin-top: 6rem;
+}
+
+.support-section {
+  width: 30%;
+  background-color: #E03131;
+  color: white;
+  height: 20rem;
+  padding: 1rem;
+}
+
+.support-section h3 {
+  color: white;
 }

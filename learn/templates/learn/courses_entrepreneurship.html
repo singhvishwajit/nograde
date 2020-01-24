@@ -4,19 +4,19 @@
 	<div class="container">
 		<header class="courses-wrapper-header">
 			<h1>Courses</h1>
-			<p>Browse all the available courses on web development, entrepreneurship and personal growth.</p>
+			<p>Browse all the available courses on being enterprising, learning how to think, personal growth and understanding your wiring.</p>
 			<ul class="category-filters">
 				<li><a href="{% url 'learn-courses' %}">All</a></li>
-				<li><a href="{% url 'learn-courses-web-dev' %}">Web Development</a></li>
-				<li><a href="{% url 'learn-courses-web-design' %}">Web Design</a></li>
-				<li><a href="{% url 'learn-courses-entrepreneurship' %}">Entrepreneurship</a></li>
+				<li><a href="{% url 'learn-courses-entrepreneurship' %}">Being enterprising</a></li>
+				<li><a href="{% url 'learn-courses-philosophy' %}">Learning how to think</a></li>
+				<li><a href="{% url 'learn-courses-psychology' %}">How are you wired?</a></li>
 				<li><a href="{% url 'learn-courses-personal-growth' %}">Personal Growth</a></li>
 			</ul>
 		</header>
 	</div>
 
 	<div class="container">
-		<h3>Entrepreneurship</h3>
+		<h3>Being enterprising</h3>
 		<div class="container-wrapper">
 			{% for course in courses_entrepreneurship %}
 				<a class="course-wrapper" href="{% url 'learn-course-details' course.slug %}">

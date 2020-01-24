@@ -17,22 +17,25 @@
 	<script src="https://kit.fontawesome.com/a28ba7e7ad.js"></script>
 
 	{% if title %}
-		<title>Vishwajit Singh - {{ title }}</title>
+		<title>NoGrade Academy - {{ title }}</title>
 	{% else %}
-		<title>Vishwajit Singh</title>
+		<title>NoGrade Academy</title>
 	{% endif %}	
 </head>
 <body>
 	<header class="site-header">
 	  	<nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
 		    <div class="container">
-		      <a class="navbar-brand mr-4" href="{% url 'blog-home' %}">No Grade Education</a>
+		      <a class="navbar-brand mr-4" href="{% url 'blog-home' %}">NoGrade Academy</a>
 		      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
 		      <span class="navbar-toggler-icon"></span>
 		      </button>
 		      <div class="collapse navbar-collapse" id="navbarToggle">
 		        <div class="navbar-nav mr-auto">
+		          <a class="nav-item nav-link" href="{% url 'blog-about' %}">About</a>
 		          <a class="nav-item nav-link" href="{% url 'learn-courses' %}">Courses</a>
+		          <a class="nav-item nav-link" href="{% url 'blog-books' %}">Bookstore</a>
+		          <a class="nav-item nav-link" href="{% url 'blog-newsletter' %}">Newsletter</a>
 		        </div>
 		        <!-- Navbar Right Side -->
 		        <div class="navbar-nav">
@@ -80,7 +83,7 @@
 			<div class="container">
 				<div class="footer-wrapper">
 					<div class="footer-column-one">
-						<h5>No Grade Education</h5>
+						<h5>NoGrade Academy</h5>
 						<br>
 						<p>Education for curious and self-motivated learners.</p>
 								
@@ -91,17 +94,17 @@
 						<br>
 						<a href="{% url 'blog-about' %}">About</a>
 						<a href="{% url 'learn-courses' %}">Courses</a>
-						<a href="#">Donate</a>
-						<a href="{% url 'blog-contact' %}">Contact Us</a>	
+						<a href="{% url 'blog-contact' %}">Contact Us</a>
+						<a href="#">Support Us</a>	
 					</div>
 
 					<div class="footer-column-three">
 						<h5>Resources</h5>
 						<br>
-						<a href="{% url 'blog-blog' %}">Blog</a>
-						<a href="{% url 'blog-books' %}">Books</a>
-						<a href="{% url 'learn-guides' %}">Guides</a>	
+						<a href="{% url 'learn-guides' %}">Guides</a>
+						<a href="{% url 'blog-books' %}">Bookstore</a>
 						<a href="{% url 'blog-newsletter' %}">Newsletter</a>
+						<a href="#">Go to vishwajitsingh.com</a>
 					</div>
 
 				    <div class="social-media-links">

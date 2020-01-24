@@ -1,61 +1,55 @@
 {% extends 'blog/base.html' %}
-{% load static from staticfiles %}
+{% load static %}
 {% block content %}
 	<div class="container">
-		<header class="wrapper-welcome">
-			<div class="wrapper-welcome-half">
-				<h2>Education for curious learners.</h2>
-				<p>Teach yourself skills to better navigate your career and life.</p>
-				<a href="{% url 'learn-courses' %}" class="btn btn-info">Start learning today</a>
-			</div>
-			<div class="wrapper-welcome-half-image">
-			</div>
-		</header>
-	</div>
-	
-	<div class="container">
-		<div class="jumbotron learn">
-			<div class="card">
-				<div class="card-body">
-				 	<h3 class="card-title">Web Development</h3>
-					<p class="card-text">Build something for the web.</p>
+		<div class="homepage-wrapper">
+			<header class="wrapper-welcome">
+				<div class="wrapper-welcome-half">
+					<h2>Education for curious learners.</h2>
+					<p>Teach yourself skills to better navigate your career and life.</p>
+					<a href="{% url 'learn-courses' %}" class="btn btn-info">Start learning today</a>
 				</div>
-			</div>
-			<div class="card">
-				<div class="card-body">
-				 	<h3 class="card-title">Entrepreneurship</h3>
-					<p class="card-text">Start a product or service based business.</p>
+				<div class="wrapper-welcome-half-image">
 				</div>
-			</div>
-			<div class="card">
-				<div class="card-body">
-				 	<h3 class="card-title">Personal Growth</h3>
-					<p class="card-text">Grow yourself to actualize your potentials.</p>
-				</div>
-			</div>
-			<a href="{% url 'learn-courses' %}" class="btn btn-info">Go To Courses</a>
+			</header>
 		</div>
 	</div>
-		
-
 	<div class="container">
-		<div class="features-wrapper">
-			<div class="feature1">
-				<img src="{% static 'diamond.png' %}">
-				<h5>Easy to understand content</h5>
-				<p>Content for learners with no prior experience.</p>
+	<div class="below-wrapper-content">
+	
+			<div class="topics-heading">
+				<h3>What can you learn?</h3>
+				<p>At NoGrade Academy, we share insights and ideas on learning how to think, understanding how you are wired, and personal growth.</p>
 			</div>
-			
-			<div class="feature2">
-				<img src="{% static 'briefcase.png' %}">
-				<h5>Project based learning</h5>
-				<p>Learn concepts by applying them in real world projects.</p>
-			</div>
-			
-			<div class="feature3">
-				<img src="{% static 'laptop.png' %}">
-				<h5>Industry relevant skills</h5>
-				<p>Prepare for employment with industry relevant courses.</p>
+			<div class="topics">
+				<div class="feature1">
+					<a class="course-thumbnail" href="{% url 'learn-courses-philosophy' %}">
+						<img class="thumbnail" src="{% static 'noun_philosophy.png' %}">
+					</a>
+					<br>
+					<p>Learning how to think</p>
+				</div>
+				<div class="feature2">
+					<a class="course-thumbnail" href="{% url 'learn-courses-psychology' %}">
+						<img class="thumbnail" src="{% static 'noun_psychology.png' %}">
+					</a>
+					<br>
+					<p>How are you wired?</p>
+				</div>
+				<div class="feature3">
+					<a class="course-thumbnail" href="{% url 'learn-courses-personal-growth' %}">
+						<img class="thumbnail" src="{% static 'noun_personal growth.png' %}">
+					</a>
+					<br>
+					<p>Personal Growth</p>
+				</div>
+				<div class="feature4">
+					<a class="course-thumbnail" href="{% url 'learn-courses-entrepreneurship' %}">
+						<img class="thumbnail" src="{% static 'noun_entrepreneur.png' %}">
+					</a>
+					<br>
+					<p>Being Enterprising</p>
+				</div>
 			</div>
 		</div>	
 	</div>
