@@ -26,35 +26,35 @@
 	<header class="site-header">
 	  	<nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
 		    <div class="container">
-		      <a class="navbar-brand mr-4" href="{% url 'blog-home' %}">NoGrade Academy</a>
-		      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
-		      <span class="navbar-toggler-icon"></span>
-		      </button>
-		      <div class="collapse navbar-collapse" id="navbarToggle">
-		        <div class="navbar-nav mr-auto">
-		          <a class="nav-item nav-link" href="{% url 'blog-about' %}">About</a>
-		          <a class="nav-item nav-link" href="{% url 'learn-courses' %}">Courses</a>
-		          <a class="nav-item nav-link" href="{% url 'blog-books' %}">Bookstore</a>
-		          <a class="nav-item nav-link" href="{% url 'blog-newsletter' %}">Newsletter</a>
-		        </div>
+		      	<a class="navbar-brand mr-4" href="{% url 'blog-home' %}">NoGrade Academy</a>
+		      	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+		      		<span class="navbar-toggler-icon"></span>
+		     	</button>
+		      	<div class="collapse navbar-collapse" id="navbarToggle">
+		        	<div class="navbar-nav mr-auto">
+		          		<a class="nav-item nav-link" href="{% url 'blog-about' %}">About</a>
+		          		<a class="nav-item nav-link" href="{% url 'learn-courses' %}">Courses</a>
+		          		<a class="nav-item nav-link" href="{% url 'blog-books' %}">Bookstore</a>
+		          		<a class="nav-item nav-link" href="{% url 'blog-newsletter' %}">Newsletter</a>
+		        	</div>
 		        <!-- Navbar Right Side -->
-		        <div class="navbar-nav">
-		        	{% if user.is_authenticated %}
-		        		<div class="dropdown">
-							<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							    <img class="rounded-circle navbar-img" src="{{ user.profile.image.url }}">{{ user.username }}
-							</button>
-							<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-							    <a class="dropdown-item" href="{% url 'profile' %}">Update Profile</a>
-							    <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+			        <div class="navbar-nav">
+			        	{% if user.is_authenticated %}
+			        		<div class="dropdown">
+								<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								    <img class="rounded-circle navbar-img" src="{{ user.profile.image.url }}">{{ user.username }}
+								</button>
+								<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+								    <a class="dropdown-item" href="{% url 'profile' %}">Update Profile</a>
+								    <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+								</div>
 							</div>
-						</div>
-		        	{% else %}
-		          		<a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
-		          		<a class="btn btn-info" href="{% url 'register' %}">Register</a>
-		          	{% endif %}
-		        </div>
-		      </div>
+			        	{% else %}
+			          		<a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
+			          		<a class="btn btn-info" href="{% url 'register' %}">Register</a>
+			          	{% endif %}
+			        </div>
+		      	</div>
 		    </div>
 	 	</nav>
 	</header>
@@ -88,7 +88,6 @@
 						<p>NoGrade Academy is an online education platform for learning skills to better navigate your life and career.</p>
 								
 					</div>
-
 					<div class="footer-column-two">
 						<h5>About Us</h5>
 						<br>
@@ -97,7 +96,6 @@
 						<a href="#">Support</a>
 						<a href="{% url 'blog-contact' %}">Contact Us</a>	
 					</div>
-
 					<div class="footer-column-three">
 						<h5>Resources</h5>
 						<br>
@@ -106,7 +104,6 @@
 						<a href="{% url 'blog-newsletter' %}">Newsletter</a>
 						<a href="#">Go to vishwajitsingh.com</a>
 					</div>
-
 				    <div class="social-media-links">
 				    	<h5>Follow Us</h5>
 				    	<br>

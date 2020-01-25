@@ -15,7 +15,6 @@ class GuideAdmin(admin.ModelAdmin):
 	models.TextField: {'widget': TinyMCE()}
 	}
 
-
 admin.site.register(Path)
 admin.site.register(Course, CourseAdmin)
 admin.site.register(Tutorial)

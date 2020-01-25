@@ -32,7 +32,6 @@ class Course(models.Model):
 	def __str__(self):
 		return f"{self.id} - {self.course_title}"
 
-
 class Guide(models.Model):
 	guide_title = models.CharField(max_length=100)
 	slug = models.SlugField()
@@ -42,9 +41,6 @@ class Guide(models.Model):
 
 	def __str__(self):
 		return self.guide_title
-
-
-
 
 class Syllabus(models.Model):
 	lesson_num = models.CharField(max_length=100)

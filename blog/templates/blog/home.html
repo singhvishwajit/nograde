@@ -15,13 +15,19 @@
 		</div>
 	</div>
 	<div class="container">
-	<div class="below-wrapper-content">
-	
+		<div class="below-wrapper-content">
 			<div class="topics-heading">
 				<h2>What can you learn?</h2>
 				<p>At NoGrade Academy, we share insights and ideas on learning how to think, understanding how you are wired, and personal growth.</p>
 			</div>
 			<div class="topics">
+				<div class="feature4">
+					<a class="course-thumbnail" href="{% url 'learn-courses-entrepreneurship' %}">
+						<img class="thumbnail" src="{% static 'noun_entrepreneur.png' %}">
+					</a>
+					<br>
+					<p>Being Enterprising</p>
+				</div>
 				<div class="feature1">
 					<a class="course-thumbnail" href="{% url 'learn-courses-philosophy' %}">
 						<img class="thumbnail" src="{% static 'noun_philosophy.png' %}">
@@ -42,13 +48,6 @@
 					</a>
 					<br>
 					<p>Personal Growth</p>
-				</div>
-				<div class="feature4">
-					<a class="course-thumbnail" href="{% url 'learn-courses-entrepreneurship' %}">
-						<img class="thumbnail" src="{% static 'noun_entrepreneur.png' %}">
-					</a>
-					<br>
-					<p>Being Enterprising</p>
 				</div>
 			</div>
 		</div>	

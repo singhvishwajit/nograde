@@ -30,21 +30,6 @@
 			{% endfor %}
 		</div>	
 			
-		<h3>Personal Growth</h3>	
-		<div class="container-wrapper">
-			{% for course in courses_personal_growth %}
-				<a class="course-wrapper" href="{% url 'learn-course-details' course.slug %}">
-					<div class="course-thumbnail">
-						<img class="thumbnail" src="{{ course.thumbnail.url }}"/>
-					</div>
-					<div class="course-body">
-						<h5>{{ course.course_title }}</h5>
-					    <p class="article-content">{{ course.course_details|safe }}</p>
-					</div>
-				</a>
-			{% endfor %}
-		</div>
-
 		<h3>Learning how to think</h3>
 		<div class="container-wrapper">
 			{% for course in courses_philosophy %}
@@ -74,5 +59,20 @@
 				</a>
 			{% endfor %}
 		</div>	
+
+		<h3>Personal Growth</h3>	
+		<div class="container-wrapper">
+			{% for course in courses_personal_growth %}
+				<a class="course-wrapper" href="{% url 'learn-course-details' course.slug %}">
+					<div class="course-thumbnail">
+						<img class="thumbnail" src="{{ course.thumbnail.url }}"/>
+					</div>
+					<div class="course-body">
+						<h5>{{ course.course_title }}</h5>
+					    <p class="article-content">{{ course.course_details|safe }}</p>
+					</div>
+				</a>
+			{% endfor %}
+		</div>
 	</div>
 {% endblock content %}

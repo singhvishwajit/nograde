@@ -1,6 +1,5 @@
 {% extends 'blog/base.html' %}
 {% block content %}
-
 	<div class="container">
 		<div class="books-banner">
 			<h2>Curated list of further readings.</h2>
@@ -8,11 +7,38 @@
 	</div>
 
 	<div class="container">
-		<br>	
 		<h3>Being enterprising</h3>
 		<hr>
 		<div class="container-wrapper">
 			{% for books in books_entrepreneurship %}
+				<a class="books-wrapper" href="{{ books.amazon_url }}">
+		    		<img class="thumbnail" src="{{ books.thumbnail.url }}"/>
+		    		<div class="books-body">
+		    			<p class="article-title"><strong>{{ books.title }}</strong></p>
+				    	<p class="article-content">{{ books.author }}</p>
+		    		</div>
+				</a>
+			{% endfor %}
+		</div>
+
+		<h3>Learning how to think</h3>
+		<hr>
+		<div class="container-wrapper">
+			{% for books in books_philosophy %}
+				<a class="books-wrapper" href="{{ books.amazon_url }}">
+		    		<img class="thumbnail" src="{{ books.thumbnail.url }}"/>
+		    		<div class="books-body">
+		    			<p class="article-title"><strong>{{ books.title }}</strong></p>
+				    	<p class="article-content">{{ books.author }}</p>
+		    		</div>
+				</a>
+			{% endfor %}
+		</div>
+
+		<h3>How are you wired?</h3>
+		<hr>
+		<div class="container-wrapper">
+			{% for books in books_psychology %}
 				<a class="books-wrapper" href="{{ books.amazon_url }}">
 		    		<img class="thumbnail" src="{{ books.thumbnail.url }}"/>
 		    		<div class="books-body">
