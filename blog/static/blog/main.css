@@ -166,7 +166,7 @@ a.article-title:hover {
 
 .footer-row {
   border-top: 1px ridge rgba(0,0,0,.125);
-  padding-top: 2rem;
+  padding-top: 4rem;
   background-color: #29292C;
   color: #b5b5c0;
   padding-bottom: 2rem;
@@ -192,20 +192,28 @@ a.article-title:hover {
   color: #E03131;
 }
 
+.footer-column-one {
+  width: 40%;
+  padding-right: 6rem;
+}
+
 .footer-column-two {
   display: flex;
   flex-direction: column;
+  width: 20%;
 }
 
 .footer-column-three {
   display: flex;
   flex-direction: column;
+  width: 20%;
 }
 
 .social-media-links a {
   color: #b5b5c0;
   padding-right: 20px;
   text-decoration: none;
+  width: 20%;
 }
 
 .social-media-links a:hover {
@@ -223,27 +231,28 @@ a.article-title:hover {
 /******************** Home Page ********************/
 
 .homepage-wrapper {
-  margin-bottom: 5rem;
+  margin-bottom: 4rem;
 }
 
 .wrapper-welcome {
   display: flex;
-  margin-top: 3rem;
+  justify-content: space-between;
+  margin-top: 6rem;
   margin-bottom: 4rem;
 }
 
 .wrapper-welcome-half {
   width: 50%;
-  padding: 12.5rem 0;
+  padding: 7rem 0;
 }
 
-.wrapper-welcome-half h1 {
+.wrapper-welcome-half h2 {
   font-size: 2.625em;
   font-weight: 500;
   line-height: 1.25;
   font-color: #3d3e44;
   margin-bottom: 1.5rem;
-  margin: 0, 0, 0.75rem;
+  margin: 0, 0, 0.5rem;
 }
 
 .wrapper-welcome-half-image {
@@ -252,20 +261,21 @@ a.article-title:hover {
   background-repeat: no-repeat;
   background-size: cover;
   width: 50%;
+  height: 30rem;
 }
 
 .below-wrapper-content {
-  margin-bottom: 6rem;
-  padding-top: 2rem;
-  border: 1px solid #E03131;
+  margin-bottom: 4rem;
 }
 
-.topics-heading h3 {
+.topics-heading h2 {
   text-align: center;
-  line-height: 1.25em;
-  font-size: 2rem;
   padding-top: 2rem;
-  margin-bottom: 24px;
+  font-size: 2.625em;
+  font-weight: 500;
+  line-height: 1.25;
+  font-color: #3d3e44;
+  margin-bottom: 4rem;
 }
 
 .topics-heading p {
@@ -278,7 +288,7 @@ a.article-title:hover {
 .topics {
   display: flex;
   justify-content: space-between;
-  height: 22rem;
+  height: 20rem;
 }
 
 .topics p{
@@ -457,24 +467,19 @@ a.highlight-post {
 /******************** Courses Page ********************/
 
 .courses-wrapper-header {
-  margin-top: 6rem;
-  margin-bottom: 6rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 
 
-.courses-wrapper-header h1 {
+.courses-wrapper-header h2 {
   font-size: 2.625em;
   font-weight: 500;
   line-height: 1.25;
   font-color: #3d3e44;
-  margin-bottom: 6rem;
+  margin-bottom: 4rem;
 }
 
-.courses-wrapper-header p {
-  margin-bottom: 1.5rem;
-  line-height: 1.6;
-  font-color: #454547;
-}
 
 .courses-wrapper-header ul {
   margin-bottom: 1.5rem;
@@ -512,23 +517,13 @@ a.highlight-post {
 
 /******************** Books Page ********************/
 
-.books-banner {
-  background-image: linear-gradient(rgba(0, 50, 75, 0.5), rgba(0, 50, 75, 0.5)), url('/static/books.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 7.5rem 0;
-  color: white;
+.books-banner h2 {
+  font-size: 2.625em;
+  font-weight: 500;
+  line-height: 1.25;
+  font-color: #3d3e44;
+  margin-bottom: 4rem;
   margin-top: 4rem;
-  margin-bottom: 2rem;
-}
-
-.books-banner h1 {
-  color: white;
-}
-
-.book-img {
-  height: 30vh;
 }
 
 .books-wrapper {
@@ -558,8 +553,8 @@ a.highlight-post {
 
 .contact-wrapper {
   display: flex;
-  margin-bottom: 6rem;
-  margin-top: 6rem;
+  margin-bottom: 4rem;
+  margin-top: 4rem;
   justify-content: space-around;
 }
 
@@ -567,8 +562,12 @@ a.highlight-post {
   width: 100%;
 }
 
-.contact-form-wrapper h1 {
-  text-align: center;
+.contact-form-wrapper h2 {
+  font-size: 2.625em;
+  font-weight: 500;
+  line-height: 1.25;
+  font-color: #3d3e44;
+  margin-bottom: 4rem;
 }
 
 /******************** Course Detail Page ********************/
@@ -684,13 +683,13 @@ a.highlight-post {
   padding-right: 4rem;
 }
 
-.about-heading {
+.about-heading h2{
   font-size: 2.625em;
   font-weight: 500;
   line-height: 1.25;
   font-color: #3d3e44;
-  margin-bottom: 6rem;
-  margin-top: 6rem;
+  margin-bottom: 4rem;
+  margin-top: 4rem;
 }
 
 .support-section {
