@@ -31,10 +31,10 @@ def about(request):
 
 def books(request):
 	context = {
-	'books_web_development': Books.objects.filter(category=1),
 	'books_personal_growth': Books.objects.filter(category=2),
 	'books_entrepreneurship': Books.objects.filter(category=3),
-	'books_web_design': Books.objects.filter(category=4),
+	'books_philosophy': Books.objects.filter(category=5),
+	'books_psychology': Books.objects.filter(category=6),
 	'title': 'Recommended Books' 
 	}
 	return render(request, 'blog/books.html', context )

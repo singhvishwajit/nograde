@@ -12,21 +12,22 @@
     <link href="{% static 'tinymce/css/prism.css' %}" rel="stylesheet">
     
     <link rel="stylesheet" type="text/css" href="{% static 'blog/main.css' %}">
+    <link rel="stylesheet" media="screen and (min-width:768px)" href="{% static 'blog/over768.css' %}">
 
     <!-- Font Awesome script -->
 	<script src="https://kit.fontawesome.com/a28ba7e7ad.js"></script>
 
 	{% if title %}
-		<title>NoGrade Academy - {{ title }}</title>
+		<title>NoGrade - {{ title }}</title>
 	{% else %}
-		<title>NoGrade Academy</title>
+		<title>NoGrade</title>
 	{% endif %}	
 </head>
 <body>
 	<header class="site-header">
-	  	<nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+	  	<nav class="navbar navbar-expand-md navbar-light bg-steel fixed-top">
 		    <div class="container">
-		      	<a class="navbar-brand mr-4" href="{% url 'blog-home' %}">NoGrade Academy</a>
+		      	<a class="navbar-brand mr-4" href="{% url 'blog-home' %}">NoGrade</a>
 		      	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
 		      		<span class="navbar-toggler-icon"></span>
 		     	</button>
@@ -83,26 +84,27 @@
 			<div class="container">
 				<div class="footer-wrapper">
 					<div class="footer-column-one">
-						<h5>NoGrade Academy</h5>
+						<h4>NoGrade</h4>
 						<br>
-						<p>NoGrade Academy is an online education platform for learning skills to better navigate your life and career.</p>
-								
+						<p>NoGrade is an online education platform for learning skills to better navigate your life and career.</p>		
 					</div>
-					<div class="footer-column-two">
-						<h5>About Us</h5>
-						<br>
-						<a href="{% url 'blog-about' %}">About</a>
-						<a href="{% url 'learn-courses' %}">Courses</a>
-						<a href="#">Support</a>
-						<a href="{% url 'blog-contact' %}">Contact Us</a>	
-					</div>
-					<div class="footer-column-three">
-						<h5>Resources</h5>
-						<br>
-						<a href="{% url 'learn-guides' %}">Guides</a>
-						<a href="{% url 'blog-books' %}">Bookstore</a>
-						<a href="{% url 'blog-newsletter' %}">Newsletter</a>
-						<a href="#">Go to vishwajitsingh.com</a>
+					<div class="footer-mobile">
+						<div class="footer-column-two">
+							<h5>About Us</h5>
+							<br>
+							<a href="{% url 'blog-about' %}">About</a>
+							<a href="{% url 'learn-courses' %}">Courses</a>
+							<a href="#">Support</a>
+							<a href="{% url 'blog-contact' %}">Contact Us</a>	
+						</div>
+						<div class="footer-column-three">
+							<h5>Resources</h5>
+							<br>
+							<a href="{% url 'learn-guides' %}">Guides</a>
+							<a href="{% url 'blog-books' %}">Bookstore</a>
+							<a href="{% url 'blog-newsletter' %}">Newsletter</a>
+							<a href="#">Go to vishwajitsingh.com</a>
+						</div>
 					</div>
 				    <div class="social-media-links">
 				    	<h5>Follow Us</h5>

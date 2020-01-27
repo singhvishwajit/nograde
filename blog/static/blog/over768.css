@@ -1,0 +1,92 @@
+
+.site-header .navbar-nav {
+  display: inline-flex;
+}
+
+/***** Home Page *****/
+
+.wrapper-welcome {
+	display: flex;
+	flex-direction: row;
+}
+
+.wrapper-welcome-half {
+	width: 50%;
+	padding: 9rem 0;
+	margin-top: 0;
+}
+
+.wrapper-welcome-half-image {
+	width: 50%;
+	height: 36rem;
+}
+
+.topics {
+	display: flex;
+}
+
+.below-wrapper-content {
+	margin-top: 6rem;
+}
+
+/***** About Page *****/
+
+.about-wrapper {
+	display: flex;
+}
+
+.about-section {
+	width: 70%;
+  	padding-right: 4rem;
+}
+
+.support-section {
+	width: 30%;
+}
+
+/***** Courses Page *****/
+
+.course-wrapper {
+	width: 48%;
+}
+
+/***** Books Page *****/
+
+.books-wrapper {
+	width: 48%;
+}
+
+/***** Newsletter Page *****/
+
+.newsletter-form-wrapper {
+	width: 50%;
+}
+
+/***** Login Page *****/
+
+.login-form-wrapper {
+	width: 50%;
+}
+
+/***** Register Page *****/
+
+.register-form-wrapper {
+	width: 50%;
+}
+
+/***** Footer *****/
+
+.footer-wrapper {
+	display: flex;
+}
+
+.footer-column-one {
+	width: 40%;
+	padding-right: 6rem;
+}
+
+.footer-mobile {
+	display: inline-flex;
+	margin-top: 0;
+	width: 40%;
+}
