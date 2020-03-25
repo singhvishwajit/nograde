@@ -7,12 +7,12 @@
 				<form method="POST">
 					{% csrf_token %}
 					<fieldset class="form-group">
-						<h2>Join Today</h2>
+						<h1><center>Join Today</center></h1>
 						<hr>
 						{{ form | crispy }}	
 					</fieldset>
 					<div class="form-group">
-						<button class="btn btn-info" type="submit">Sign Up</button>
+						<button class="btn btn-dark mb-3" type="submit">Sign Up</button>
 					</div>
 				</form>
 				<div class="border-top pt-3">

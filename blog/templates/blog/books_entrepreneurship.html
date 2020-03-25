@@ -29,50 +29,12 @@
 				</div>	
 
 				<div class="books-page-wrapper">
-					<h1><center>All Books</center></h1>
+					<h1><center>Entrepreneurship</center></h1>
 					<div class="books-container-wrapper">
 						{% for books in books_entrepreneurship %}
 							<a class="books-wrapper" href="{{ books.amazon_url }}">
 					    		<img class="thumbnail" src="{{ books.thumbnail.url }}" alt="{{ books.alt_text }}"/>
-					    		<!-- <div class="books-body">
-					    			<p class="article-title"><strong>{{ books.title }}</strong></p>
-							    	<p class="article-content">{{ books.author }}</p>
-					    		</div> -->
-							</a>
-						{% endfor %}
-					</div>
-
-
-					<div class="books-container-wrapper">
-						{% for books in books_philosophy %}
-							<a class="books-wrapper" href="{{ books.amazon_url }}">
-					    		<img class="thumbnail" src="{{ books.thumbnail.url }}" alt="{{ books.alt_text }}"/>
-	<!-- 				    		<div class="books-body">
-					    			<p class="article-title"><strong>{{ books.title }}</strong></p>
-							    	<p class="article-content">{{ books.author }}</p>
-					    		</div> -->
-							</a>
-						{% endfor %}
-					</div>
-
-
-					<div class="books-container-wrapper">
-						{% for books in books_psychology %}
-							<a class="books-wrapper" href="{{ books.amazon_url }}">
-					    		<img class="thumbnail" src="{{ books.thumbnail.url }}" alt="{{ books.alt_text }}"/>
-	<!-- 				    		<div class="books-body">
-					    			<p class="article-title"><strong>{{ books.title }}</strong></p>
-							    	<p class="article-content">{{ books.author }}</p>
-					    		</div> -->
-							</a>
-						{% endfor %}
-					</div>
-
-					<div class="books-container-wrapper">
-						{% for books in books_personal_growth %}
-							<a class="books-wrapper" href="{{ books.amazon_url }}">
-					    		<img class="thumbnail" src="{{ books.thumbnail.url }}" alt="{{ books.alt_text }}"/>
-	<!-- 				    		<div class="books-body">
+		<!-- 			    		<div class="books-body">
 					    			<p class="article-title"><strong>{{ books.title }}</strong></p>
 							    	<p class="article-content">{{ books.author }}</p>
 					    		</div> -->
@@ -81,7 +43,7 @@
 					</div>
 					<p>Note: VS OPC Pvt. Ltd. participates in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn commissions by linking to Amazon.</p>
 				</div>
-			</div>	
+			</div>
 		</div>
 	</div>
-{% endblock content %}
+{% endblock content %}	

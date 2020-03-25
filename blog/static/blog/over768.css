@@ -1,6 +1,7 @@
 
 .site-header .navbar-nav {
-  display: inline-flex;
+  display: flex;
+  flex-direction: row;
 }
 
 /***** Home Page *****/
@@ -25,24 +26,21 @@
 	display: flex;
 }
 
-.below-wrapper-content {
-	margin-top: 6rem;
-}
-
 /***** About Page *****/
 
 .about-wrapper {
 	display: flex;
+	justify-content: space-around;
 }
 
 .about-section {
-	width: 70%;
+	width: 60%;
   	padding-right: 4rem;
 }
 
-.support-section {
+/*.support-section {
 	width: 30%;
-}
+}*/
 
 /***** Courses Page *****/
 
@@ -50,28 +48,59 @@
 	width: 48%;
 }
 
+.courses-wrapper-header {
+	position: fixed;
+	top: 4rem;
+	z-index: 1;
+}
+
+.course-page-wrapper {
+	margin-top: 5rem;
+}
+
 /***** Books Page *****/
 
 .books-wrapper {
-	width: 48%;
+	width: 33%;
+}
+
+.books {
+	display: flex;
+	justify-content: space-between;
+}
+
+.books-header-wrapper {
+	width: 30%;
+	margin-top: 7.5rem;
+	margin-right: 3rem;
+}
+
+.books-container-wrapper .books-wrapper {
+	width: 30%;
 }
 
 /***** Newsletter Page *****/
 
 .newsletter-form-wrapper {
-	width: 50%;
+	width: 40%;
 }
 
 /***** Login Page *****/
 
 .login-form-wrapper {
-	width: 50%;
+	width: 40%;
 }
 
 /***** Register Page *****/
 
 .register-form-wrapper {
-	width: 50%;
+	width: 40%;
+}
+
+/***** Contact Page *****/
+
+.contact-form-wrapper {
+	width: 100%;
 }
 
 /***** Footer *****/
@@ -89,4 +118,49 @@
 	display: inline-flex;
 	margin-top: 0;
 	width: 40%;
+}
+
+/***** Guides Page *****/
+.guide-wrapper {
+	width: 32%;
+}
+
+/***** Course Detail Page *****/
+
+.share {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-left: 0;
+}
+
+.share h4 {
+  margin-bottom: 2rem;
+  margin-top: 0;
+  display: block;
+}
+
+.essay-title {
+  position: relative;
+  bottom: 20rem;
+  color: white;
+  left: 26rem;
+  width: 72.5%;
+  font-size: 3rem;
+  padding-right: 10rem;
+  background: linear-gradient(135deg,
+              rgba(0, 0, 0, 0.8) 0%,
+              rgba(0, 0, 0, 0.3) 50%);
+}
+
+.course-content {
+  width: 80%;
+  padding: 0rem 15rem 2rem 0;
+}
+
+.course-detail-body {
+  display: flex;
+  margin-bottom: 4rem;
+  flex-direction: row;
 }

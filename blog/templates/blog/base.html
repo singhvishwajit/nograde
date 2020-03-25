@@ -1,6 +1,6 @@
 {% load static from staticfiles %}
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -18,23 +18,24 @@
 	<script src="https://kit.fontawesome.com/a28ba7e7ad.js"></script>
 
 	{% if title %}
-		<title>NoGrade - {{ title }}</title>
+		<title>{{ title }} | Vishwajit Singh </title>
 	{% else %}
-		<title>NoGrade</title>
+		<title>Vishwajit Singh | Essays on the human condition</title>
 	{% endif %}	
 </head>
 <body>
 	<header class="site-header">
 	  	<nav class="navbar navbar-expand-md navbar-light bg-steel fixed-top">
 		    <div class="container">
-		      	<a class="navbar-brand mr-4" href="{% url 'blog-home' %}">NoGrade</a>
+		      	<a class="navbar-brand mr-4" href="{% url 'blog-home' %}">Vishwajit Singh</a>
 		      	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
 		      		<span class="navbar-toggler-icon"></span>
 		     	</button>
 		      	<div class="collapse navbar-collapse" id="navbarToggle">
-		        	<div class="navbar-nav mr-auto">
+		        	<div class="navbar-nav mr-auto ml-auto">
 		          		<a class="nav-item nav-link" href="{% url 'blog-about' %}">About</a>
-		          		<a class="nav-item nav-link" href="{% url 'learn-courses' %}">Courses</a>
+		          		<a class="nav-item nav-link" href="{% url 'learn-courses' %}">Essays</a>
+		          		<a class="nav-item nav-link" href="{% url 'blog-blog' %}">Guides</a>
 		          		<a class="nav-item nav-link" href="{% url 'blog-books' %}">Bookstore</a>
 		          		<a class="nav-item nav-link" href="{% url 'blog-newsletter' %}">Newsletter</a>
 		        	</div>
@@ -52,7 +53,7 @@
 							</div>
 			        	{% else %}
 			          		<a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
-			          		<a class="btn btn-info" href="{% url 'register' %}">Register</a>
+			          		<a class="btn btn-dark" href="{% url 'register' %}">Register</a>
 			          	{% endif %}
 			        </div>
 		      	</div>
@@ -70,7 +71,7 @@
 				    			{{ message }}
 				    		</div>
 				    	{% endfor %}
-				    {% endif %}	
+				    {% endif %}
 				</div>
 			</div>	
 		</div>
@@ -79,51 +80,41 @@
 	
 	
 	<!-- footer -->
-	<footer>
-		<div class="footer-row">
-			<div class="container">
-				<div class="footer-wrapper">
-					<div class="footer-column-one">
-						<h4>NoGrade</h4>
-						<br>
-						<p>NoGrade is an online education platform for learning skills to better navigate your life and career.</p>		
-					</div>
-					<div class="footer-mobile">
-						<div class="footer-column-two">
-							<h5>About Us</h5>
-							<br>
-							<a href="{% url 'blog-about' %}">About</a>
-							<a href="{% url 'learn-courses' %}">Courses</a>
-							<a href="#">Support</a>
-							<a href="{% url 'blog-contact' %}">Contact Us</a>	
-						</div>
-						<div class="footer-column-three">
-							<h5>Resources</h5>
-							<br>
-							<a href="{% url 'learn-guides' %}">Guides</a>
-							<a href="{% url 'blog-books' %}">Bookstore</a>
-							<a href="{% url 'blog-newsletter' %}">Newsletter</a>
-							<a href="#">Go to vishwajitsingh.com</a>
-						</div>
-					</div>
-				    <div class="social-media-links">
-				    	<h5>Follow Us</h5>
-				    	<br>
-				      	<a href="https://twitter.com/vishwajitsingh/" target="_blank">
-				        	<i class="fab fa-twitter"></i>
-				      	</a>
-				      	<a href="https://www.linkedin.com/in/singhvishwajit/" target="_blank">
-				        	<i class="fab fa-linkedin-in"></i>
-				      	</a>
-			      		<a href="https://github.com/singhvishwajit/" target="_blank">
-			        		<i class="fab fa-github-square"></i>
-			      		</a>
-				    </div>
+	<footer class="footer-row">
+		<div class="container">
+			<div class="footer-wrapper">
+				<div class="footer-column-one">
+					<h4>Vishwajit Singh</h4>
+					<br>
+					<p>Essays on the human condition.</p>		
 				</div>
-			   	<div class="copyright">
-			      	<p>© 2019 Copyright | <a href="#">Privacy</a> | <a href="#">Terms of Use</a></p>
+				<div class="footer-mobile">
+					<div class="footer-column-two">
+						<h5>About Me</h5>
+						<br>
+						<a href="{% url 'blog-about' %}">About</a>
+						<a href="{% url 'learn-courses' %}">Essays</a>
+						<a href="{% url 'blog-contact' %}">Contact</a>	
+					</div>
+					<div class="footer-column-three">
+						<h5>Resources</h5>
+						<br>
+						<a href="{% url 'blog-blog' %}">Guides</a>
+						<a href="{% url 'blog-books' %}">Bookstore</a>
+						<a href="{% url 'blog-newsletter' %}">Newsletter</a>
+					</div>
+				</div>
+			    <div class="social-media-links">
+			    	<h5>Follow Me</h5>
+			    	<br>
+			      	<a href="https://twitter.com/vishwajitsingh/" target="_blank">
+			        	Twitter
+			      	</a>
 			    </div>
 			</div>
+		   	<div class="copyright">
+		      	<p>© 2020 Vishwajit Singh | <a href="{% url 'blog-privacy' %}">Privacy</a> | <a href="{% url 'blog-terms' %}">Terms of Use</a></p>
+		    </div>
 		</div>
 	</footer>
 

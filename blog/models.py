@@ -40,6 +40,7 @@ class Books(models.Model):
 	category = models.ManyToManyField(Path, blank=True)
 	details = models.TextField()
 	amazon_url = models.URLField(default='google.com')
+	alt_text = models.TextField(default="some-string")
 
 	def __str__(self):
 		return self.title

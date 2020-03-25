@@ -1,6 +1,9 @@
 {% extends 'blog/base.html' %}
+{% load crispy_forms_tags %}
 {% block content %}
 	<div class="container">
-		<p>Thank you for contacting us! We will be in touch shortly.</p>
+		<div class="contact-success-wrapper">
+			<p>Thank you for contacting me! I will be in touch shortly.</p>
+			<p>In the meantime, you can sign up for my <a href="{% url 'blog-newsletter' %}">newsletter</a> to stay updated on new essays and guides or direct message me on <a href="https://twitter.com/vishwajitsingh/" target="_blank">Twitter</a>.</p>
 	</div>
 {% endblock content %}

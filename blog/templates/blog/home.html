@@ -5,51 +5,49 @@
 		<div class="homepage-wrapper">
 			<header class="wrapper-welcome">
 				<div class="wrapper-welcome-half">
-					<h2>Education for curious learners.</h2>
-					<p>Learn skills to better navigate your career and life.</p>
-					<a href="{% url 'learn-courses' %}" class="btn btn-info">Start learning today</a>
+					<h1>Essays on the <span class="heading-title">human condition</span>.</h1>
+					<p>Suggestions and tools for navigating life.</p>
+					<a href="{% url 'learn-courses' %}" class="btn btn-dark">Explore essays</a>
 				</div>
-				<div class="wrapper-welcome-half-image">
-				</div>
+				<img class="wrapper-welcome-half-image" src="{% static 'education.jpg' %}" alt="human condition" >
 			</header>
 		</div>
 	</div>
-	<div class="container">
-		<div class="below-wrapper-content">
+	<div class="below-wrapper-content">
+		<div class="container">
 			<div class="topics-heading">
-				<h2>What can you learn?</h2>
-				<p>At NoGrade Academy, we share insights and ideas on learning how to think, understanding how you are wired, and personal growth.</p>
+				<h2>What do I write on?</h2>
 			</div>
 			<div class="topics">
 				<div class="feature4">
 					<a class="course-thumbnail" href="{% url 'learn-courses-entrepreneurship' %}">
-						<img class="thumbnail" src="{% static 'noun_entrepreneur.png' %}">
+						<img class="thumbnail" src="{% static 'noun_entrepreneur.png' %}" alt="work">
 					</a>
 					<br>
-					<p>Being Enterprising</p>
+					<p><center><strong>Work</strong></center></p>
 				</div>
 				<div class="feature1">
 					<a class="course-thumbnail" href="{% url 'learn-courses-philosophy' %}">
-						<img class="thumbnail" src="{% static 'noun_philosophy.png' %}">
+						<img class="thumbnail" src="{% static 'noun_philosophy.png' %}" alt="thinking">
 					</a>
 					<br>
-					<p>Learning how to think</p>
+					<p><center><strong>Thinking</strong></center></p>
 				</div>
 				<div class="feature2">
 					<a class="course-thumbnail" href="{% url 'learn-courses-psychology' %}">
-						<img class="thumbnail" src="{% static 'noun_psychology.png' %}">
+						<img class="thumbnail" src="{% static 'noun_psychology.png' %}" alt="self-Knowledge">
 					</a>
 					<br>
-					<p>How are you wired?</p>
+					<p><center><strong>Self-Knowledge</strong></center></p>
 				</div>
 				<div class="feature3">
 					<a class="course-thumbnail" href="{% url 'learn-courses-personal-growth' %}">
-						<img class="thumbnail" src="{% static 'noun_personal growth.png' %}">
+						<img class="thumbnail" src="{% static 'noun_personal_growth.png' %}" alt="personal growth">
 					</a>
 					<br>
-					<p>Personal Growth</p>
+					<p><center><strong>Personal Growth</strong></center></p>
 				</div>
 			</div>
-		</div>	
-	</div>
+		</div>
+	</div>	
 {% endblock content %}

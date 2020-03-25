@@ -23,38 +23,12 @@ class Course(models.Model):
 	course_title = models.CharField(max_length=100)
 	slug = models.SlugField(default="some-string")
 	course_details = models.TextField()
-	skills_covered = models.TextField()
+	course_content = models.TextField(default="hello")
 	thumbnail = models.ImageField(default='default.png', blank=True)
-	prerequisites = models.CharField(max_length=100, default="some-string")
+	alt_text = models.TextField(default="some-string")
 
 	# add in thumbnail
 
 	def __str__(self):
 		return f"{self.id} - {self.course_title}"
 
-class Guide(models.Model):
-	guide_title = models.CharField(max_length=100)
-	slug = models.SlugField()
-	guide_details = models.TextField()
-	course_name = models.ForeignKey(Course, on_delete=models.CASCADE)
-	guide_snippet = models.CharField(max_length=100, default='some-string')
-
-	def __str__(self):
-		return self.guide_title
-
-class Syllabus(models.Model):
-	lesson_num = models.CharField(max_length=100)
-	lesson_title = models.CharField(max_length=100)
-	lesson_overview = models.TextField()
-	course_name = models.ForeignKey(Course, on_delete=models.CASCADE)
-
-	def __str__(self):
-		return f"{self.course_name}-{self.lesson_num}"
-
-class Tutorial(models.Model):
-	tutorial_title = models.CharField(max_length=100)
-	tutorial_content = models.TextField()
-	courses = models.ManyToManyField(Course, blank=True, related_name="tutorials")
-
-	def __str__(self):
-		return f"{self.id} - {self.tutorial_title}"

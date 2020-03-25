@@ -1,15 +1,52 @@
 {% extends 'blog/base.html' %}
 {% load static from staticfiles %}
 {% block content %}
-	<div class="container">
-		<article class="course-detail-banner">
-			<div class="course-detail-half-content">
-				<h2>{{ course.course_title }}</h2>
-				<p>{{ course.course_details | safe }}</p>
+	<header class="courses-wrapper-header">
+		<nav class="category-filters">
+			<div class="container">
+				<a class="nav-item nav-link" href="{% url 'learn-courses' %}">All</a>
+				<a class="nav-item nav-link" href="{% url 'learn-courses-entrepreneurship' %}">Work</a>
+				<a class="nav-item nav-link" href="{% url 'learn-courses-philosophy' %}">Thinking</a>
+				<a class="nav-item nav-link" href="{% url 'learn-courses-psychology' %}">Self-Knowledge</a>
+				<a class="nav-item nav-link" href="{% url 'learn-courses-personal-growth' %}">Personal Growth</a>
+				<a class="nav-item nav-link" href="{% url 'learn-courses-society' %}">Society</a>
+			</div>	
+		</ul>
+	</header>
+
+	<article>
+		<img class="course-banner" src="{{ course.thumbnail.url }}" alt="{{ course.alt_text }}"/>
+		<h1 class="essay-title">{{ course.course_title }}</h1>
+		<div class="container">
+			<div class="course-detail-body">
+				<div class="share">
+					<h4>Share:</h4>
+					<div class="twitter">
+						<a href="https://twitter.com/intent/tweet?text={{ course.course_title }} https://vishwajitsingh.com{% url 'learn-course-details' course.slug %}" target="_blank">
+					    	<i class="fab fa-twitter fa-2x"></i> 
+						</a> 
+						<p>Tweet</p>
+					</div>
+				    <br>
+			      	<div class="Email">
+			      		<a href="https://github.com/singhvishwajit/" target="_blank">
+			        		<i class="fas fa-envelope-square fa-2x"></i>
+			      		</a> 
+			      		<p>Email</p>
+			      	</div>
+			      	<br>
+			      	<div class="Print">
+			      		<a href="https://github.com/singhvishwajit/" target="_blank">
+			        		<i class="fas fa-print fa-2x"></i>
+			      		</a> 
+			      		<p>Print</p>
+			      	</div>
+			      	<br>
+				</div>
+				<div class="course-content">
+					{{ course.course_content | safe}}
+				</div>
 			</div>
-			<div class="course-detail-banner-thumbnail">
-				<img src="{{ course.thumbnail.url }}"/>
-			</div>
-		</article>
-	</div>
+		</div>
+	</article>
 {% endblock content %}

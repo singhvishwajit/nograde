@@ -1,0 +1,8 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+	<div class="container">
+		<h1>404 Page Not Found</h1>
+		<p>Sorry, the file that you requested can not be found.</p>
+		<p>Go to <a href="{% url 'blog-home' %}">Homepage!</a></p>
+	</div>
+{% endblock content %}

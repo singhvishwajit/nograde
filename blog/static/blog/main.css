@@ -1,9 +1,8 @@
 /******************** Global Styles ********************/
-
 body {
   background: #ffffff;
   color: #333333;
-  margin-top: 5rem;
+  margin-top: 4rem;
   min-height: 100%;
 }
 
@@ -22,8 +21,14 @@ ul {
   margin: 0;
 }
 
+.form-control:focus {
+  border-color: #000000;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 0, 0, 0.6);
+}
+
+
 .navbar {
-  height: 8rem;
+  border-bottom: 1px solid rgba(0, 0, 0, .125);
 }
 
 .bg-steel {
@@ -31,20 +36,21 @@ ul {
 }
 
 .site-header .navbar-brand {
-  color: #E03131;
+  color: #000000;
   line-height: 1;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bolder;
 }
 
 .site-header .navbar-brand:hover {
-  color: #E03131;
+  color: #000000;
 }
 
 .site-header .navbar-nav {
-  display: block;
+  display: flex;
   background-color: white;
   text-align: center;
+  flex-direction: column;
 }
 
 .site-header .navbar-nav .nav-link {
@@ -54,6 +60,10 @@ ul {
 .site-header .navbar-nav .nav-link:hover {
   color: #E03131;
   text-decoration: underline;
+}
+
+.site-header .navbar-nav .nav-link .current {
+  color: blue;
 }
 
 .site-header .navbar-nav .nav-link:active {
@@ -74,22 +84,26 @@ ul {
   margin-top: 1rem;
 }
 
-.btn-info {
-  background-color: #E03131; /* rgba(224, 49, 49, 1) */
-  border: none;
-  border-radius: 100rem;
+.btn-dark {
+  background-color: #000000 !important; /* rgba(224, 49, 49, 1) */
+  border: 5px;
+  border-radius: 0;
   font-size: 1rem;
   font-weight: 500;
   line-height: 1;
-  padding: 1rem 1.5rem;
+  padding: 1rem 1rem;
   color: white;
   cursor: pointer;
+  outline: none;
+  width: 100%;
 }
 
-.btn-info:hover {
-  background-color: #E03131;
+.btn-dark:hover {
+  background-color: #000000;
   border: none;
   opacity: 0.8;
+  outline: none;
+  box-shadow: none;
 }
 
 .btn-secondary {
@@ -114,11 +128,12 @@ ul {
 
 .content-section {
   background: #ffffff;
-  padding: 10px 20px;
+  padding: 2rem;
   border: 1px solid #dddddd;
   border-radius: 3px;
-  margin-bottom: 20px;
+  margin-bottom: 4rem;
   flex-basis: 30%;
+  margin-top: 4rem;
 }
 
 .article-title {
@@ -158,8 +173,8 @@ a.article-title:hover {
 }
 
 .account-img {
-  height: 125px;
-  width: 125px;
+  height: 250px;
+  width: 250px;
   margin-right: 20px;
   margin-bottom: 16px;
 }
@@ -176,6 +191,10 @@ a.article-title:hover {
 
 .account-heading {
   font-size: 2.5rem;
+}
+
+.alert {
+  margin-top: 1rem;
 }
 
 /******************** Footer ********************/
@@ -272,7 +291,7 @@ a.article-title:hover {
   justify-content: space-between;
  /* margin-top: 6rem; */
  /* margin-bottom: 4rem; */
- margin-top: 3rem;
+  margin-top: 3rem;
 }
 
 .wrapper-welcome-half {
@@ -282,7 +301,11 @@ a.article-title:hover {
   /*padding: 9rem 0;*/
 }
 
-.wrapper-welcome-half h2 {
+.wrapper-welcome-half .btn-dark {
+  width: 30%;
+}
+
+.wrapper-welcome-half h1 {
   font-size: 2rem;
   font-weight: bold;
   line-height: 1.25;
@@ -296,22 +319,19 @@ a.article-title:hover {
 }
 
 .wrapper-welcome-half-image {
-  background-image: url('/static/education.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   /* width: 50%; */
   width: 100%;
-  height: 40vh;
+  height: 42.5vh;
  /* height: 36rem; */
 } 
 
 .below-wrapper-content {
-  margin-bottom: 6rem;
-  box-shadow: 0 15px 35px rgba(126,87,88,.1), 0 5px 15px rgba(0,0,0,.07);
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-  margin-top: 4rem;
+  padding-top: 6rem;
+  padding-bottom: 8rem;
+  background-color: #F9F9F9;
 }
 
 .topics-heading h2 {
@@ -367,22 +387,41 @@ a.article-title:hover {
 
 /******************** Blog Page ********************/
 
+.blog-wrapper-header {
+  margin-top: 2.5rem;
+}
+
+
 .blog-wrapper-header h1 {
-  font-size: 2.625em;
-  font-weight: 500;
+  font-size: 2rem;
+  font-weight: bold;
   line-height: 1.25;
   font-color: #3d3e44;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.guide-detail-wrapper {
+  margin-top: 2.5rem;
+}
+
+
+.guide-detail-wrapper h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.25;
+  font-color: #3d3e44;
+  margin-bottom: 2rem;
 }
 
 .blog-wrapper-header p {
-  margin-bottom: 1.5rem;
+/*  margin-bottom: 1.5rem;*/
   line-height: 1.6;
   font-color: #454547;
 }
 
 .blog-wrapper-header ul {
   margin-bottom: 1.5rem;
+  border-bottom: 1px solid #E03131;
 }
 
 .blog-wrapper-header ul li {
@@ -399,11 +438,12 @@ a.article-title:hover {
 }
 
 .category-filters {
-  padding-left: 0;
+  background-color: #F9F9F9;
+  text-align: center;
 }
 
-.category-filters li {
-  display: inline-block;
+.category-filters  {
+  display: flex;
 }
 
 .highlight-post {
@@ -439,11 +479,10 @@ a.highlight-post {
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 3rem;
-  margin-top: 1rem;
 }
 
-.blog-wrapper {
-  width: 32%;
+.guide-wrapper {
+  width: 100%;
   border: 1px solid rgba(0, 0, 0, .125);
   margin-bottom: 2rem;
   margin-top: 1rem;
@@ -451,15 +490,18 @@ a.highlight-post {
 }
 
 .thumbnail {
-  height: 30vh;
+  height: 37.5vh;
   width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.blog-wrapper .blog-body {
+.guide-wrapper .guide-body {
   padding: 1rem;
 }
 
-.container-wrapper .blog-wrapper {
+.container-wrapper .guide-wrapper {
   text-decoration: none;
   color: #454547;
 }
@@ -508,18 +550,49 @@ a.highlight-post {
   padding-right: 2rem;
 }
 
+.guide-page-wrapper {
+  padding-bottom: 4.5rem;
+}
+
 /******************** Courses Page ********************/
+
+.nav-link {
+  display: inline-flex;
+  color: #3d3e44;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+  color: #E03131;
+}
+
+.nav-link:active {
+  font-weight: bold;
+}
 
 .course-page-wrapper {
   padding-bottom: 1rem;
+  margin-top: 7rem;
 }
 
+.course-page-wrapper h1 {
+  font-size: 2rem;
+  text-align: center; 
+  font-weight: bold;
+  color: #3d3e44;
+  line-height: 1.25;
+  font-color: #3d3e44;
+
+}
 
 .courses-wrapper-header {
-  margin-top: 4rem;
-  margin-bottom: 4rem;
+  position: fixed;
+  top: 3.5rem;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  background-color: #ffffff;
 }
-
 
 /* .courses-wrapper-header h2 {
   font-size: 2.625em;
@@ -538,27 +611,29 @@ a.highlight-post {
 }
 
 .courses-wrapper-header ul {
-  margin-bottom: 1.5rem;
+  border-top: 1px solid rgba(0, 0, 0, .125);
+  border-bottom: 1px solid rgba(0, 0, 0, .125);
 }
 
 .courses-wrapper-header ul li {
   margin-right: 1.5rem;
   margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 .courses-wrapper-header ul li a {
   color: #3d3e44;
-  text-decoration: underline;
 }
 
 .courses-wrapper-header ul li a:hover {
   color: #E03131;
+  text-decoration: underline;
 }
 
 .courses-wrapper-header h3 {
   font-size: 1.5rem;
   margin-bottom: 4rem;
-  font-color: #3d3e44;
+  color: #3d3e44;
 }
 
 .course-wrapper {
@@ -579,23 +654,55 @@ a.highlight-post {
   color: #454547;
 }
 
+.course-detail-body {
+  display: flex;
+  margin-bottom: 3rem;
+  flex-direction: column-reverse;
+}
+
+
+.course-content {
+  width: 100%;
+  padding: 0 0 4rem 0;
+}
+
+
 /******************** Books Page ********************/
 
 .books-page-wrapper {
-  padding-bottom: 1rem;
+  padding-bottom: 4rem;
+  width: 100%;
+
 }
 
-.books-banner h2 {
+.books-container {
+  margin-top: 2.5rem;
+}
+
+.books-container h1 {
   font-size: 2rem;
   font-weight: bold;
-  margin-bottom: 4rem;
-  font-color: #3d3e44;
-  margin-top: 4rem;
+  line-height: 1.25;
+  color: #3d3e44;
+  margin-bottom: 2rem;
 }
 
-.books-wrapper {
+
+.books-header-wrapper {
   width: 100%;
-  height: 55vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.books-container-wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.books-container-wrapper .books-wrapper {
+  width: 100%;
   margin-bottom: 2rem;
   margin-top: 2rem;
   position: relative;
@@ -604,7 +711,6 @@ a.highlight-post {
 
 .books-wrapper img {
   width: 100%;
-  height: 38vh;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -629,34 +735,49 @@ a.highlight-post {
   width: 100%;
 }
 
-.contact-form-wrapper h2 {
-  font-size: 2.625em;
-  font-weight: 500;
+.contact-form-wrapper h1 {
+  font-size: 2rem;
+  font-weight: bold;
   line-height: 1.25;
-  font-color: #3d3e44;
-  margin-bottom: 4rem;
+  color: #3d3e44;
+  margin-bottom: 2rem;
+}
+
+/******************** Contact Success Page ********************/
+
+.contact-success-wrapper {
+  margin-bottom: 10rem;
+  padding-top: 3rem;
+  padding-bottom: 4rem;
 }
 
 /******************** Course Detail Page ********************/
 
-.course-detail-banner {
-  display: flex;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  align-items: center;
-}
-
-.course-detail-banner-thumbnail {
-  width: 50%;
-}
-
-.course-detail-banner-thumbnail img {
+.course-banner {
+  background: linear-gradient(135deg,
+              rgba(0, 0, 0, 0.8) 0%,
+              rgba(0, 0, 0, 0.3) 50%);
   width: 100%;
+  height: 70vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.course-detail-half-content {
-  width: 50%;
-  padding-right: 5rem;
+/*.course-detail-banner {
+  align-items: center;
+  display: flex;
+}*/
+
+
+.share {
+  display: flex;
+  justify-content: space-around;
+  padding-left: 2rem;
+}
+
+.share h4 {
+  display: none;
 }
 
 .course-detail-wrapper {
@@ -676,15 +797,23 @@ a.highlight-post {
   display: flex;
 }
 
+.course-content {
+  font-size: 1rem;
+}
+
+.heading-title {
+  color: #E03131;
+}
+
 /******************** Newsletter Page ********************/
 
 .newsletter-wrapper {
   display: flex;
   justify-content: space-around;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
-  margin-top: 4rem;
+  margin-top: 3rem;
 }
 
 .newsletter-form-wrapper {
@@ -695,6 +824,14 @@ a.highlight-post {
   width: 100%;
 }
 
+.newsletter-form-wrapper h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #3d3e44;
+  line-height: 1.25;
+  font-color: #3d3e44;
+}
+
 /******************** Guide Details Page ********************/
 .guide-body {
   padding-top: 1rem;
@@ -702,6 +839,18 @@ a.highlight-post {
   margin-bottom: 2rem;
 }
 
+.guide-wrapper {
+  padding-top: 1.5rem;
+}
+
+.guide-wrapper h1 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #3d3e44;
+  line-height: 1.25;
+  font-color: #3d3e44;
+}
 /******************** Login Page ********************/
 
 .login-wrapper {
@@ -709,8 +858,8 @@ a.highlight-post {
   justify-content: space-around;
   padding-top: 2rem;
   padding-bottom: 2rem;
-  margin-top: 4rem;
-  margin-bottom: 4rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .login-form-wrapper {
@@ -721,13 +870,30 @@ a.highlight-post {
   width: 100%;
 }
 
+.login-wrapper a {
+  color: #4e4e53;
+  text-decoration: underline;
+}
+
+.login-wrapper a:hover {
+  color: #E03131;
+}
+
+.login-form-wrapper h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #3d3e44;
+  line-height: 1.25;
+  font-color: #3d3e44;
+}
+
 /******************** Register Page ********************/
 
 .register-wrapper {
   display: flex;
   justify-content: space-around;
-  margin-top: 4rem;
-  margin-bottom: 4rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
@@ -740,40 +906,43 @@ a.highlight-post {
   width: 100%;
 }
 
+.register-form-wrapper h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #3d3e44;
+  line-height: 1.25;
+  font-color: #3d3e44;
+}
+
+.register-wrapper a {
+  color: #4e4e53;
+  text-decoration: underline;
+}
+
+.register-wrapper a:hover {
+  color: #E03131;
+}
+
 
 /******************** About Page ********************/
 
-.about-wrapper {
-  /*display: flex;*/
-  margin-bottom: 4rem;
+.about-heading {
+  padding-top: 4rem;
+  padding-bottom: 2rem;
 }
-
-.about-section {
-  /* width: 70%; */
-  /*padding-right: 4rem;*/
-  margin-bottom: 3rem;
-}
-
-/*.about-heading h2{
-  font-size: 2.625em;
-  font-weight: 500;
-  line-height: 1.25;
-  font-color: #3d3e44;
-  margin-bottom: 4rem;
-  margin-top: 4rem;
-}*/
-
-.about-heading h2 {
+.about-heading h1 {
   font-size: 2rem;
   font-weight: bold;
-  margin-bottom: 4rem;
+  color: #3d3e44;
+  line-height: 1.25;
   font-color: #3d3e44;
-  margin-top: 4rem;
 }
-  
+
+.about-wrapper {
+  margin-bottom: 5rem;
+}
 
 .support-section {
-  /*width: 30%; */
   background-color: #E03131;
   color: white;
   height: 20rem;
@@ -785,4 +954,53 @@ a.highlight-post {
 
 .support-section h3 {
   color: white;
+}
+
+.tab-container ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.tab-container ul li.active-tab a {
+    background: #E03131;
+    color: #fff;
+    font-weight: bold;
+}
+
+
+.tab-container ul li a {
+    display: block;
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.5em;
+    padding: 7px;
+    margin-left: -7px;
+    max-width: 210px;
+    border-radius: 3px;
+}
+
+/******************** Privacy Page ********************/
+
+.privacy-page-wrapper {
+  margin-top: 4rem;
+  padding-bottom: 4rem
+}
+
+
+/******************** Terms Page ********************/
+.terms-page-wrapper {
+  margin-top: 4rem;
+  padding-bottom: 4rem
+}
+
+
+.essay-title {
+  position: relative;
+  bottom: 15rem;
+  color: white;
+  font-size: 3rem;
+  padding: 0 2rem 0 2rem;
+  background: linear-gradient(135deg,
+              rgba(0, 0, 0, 0.8) 0%,
+              rgba(0, 0, 0, 0.3) 50%);
 }

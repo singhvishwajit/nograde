@@ -4,16 +4,16 @@
 	<div class="container">
 		<div class="newsletter-wrapper">
 			<div class="newsletter-form-wrapper">
-				<h2>Newsletter</h2>
+				<h1><center>Newsletter</center></h1>
 				<hr>
-				<p>Subscribe for actionable advice and tips to help navigate your life and career. No spam ever!</p>
+				<p>Subscribe for new essays and tools delivered straight to your inbox. No spam ever!</p>
 				<form method="POST">
 					{% csrf_token %}
 					<fieldset class="form-group">
 						{{ form|crispy }}	
 					</fieldset>
 					<div class="form-group">
-						<button class="btn btn-info" type="submit">Subscribe</button>
+						<button class="btn btn-dark" type="submit">Subscribe</button>
 					</div>
 				</form>
 			</div>	

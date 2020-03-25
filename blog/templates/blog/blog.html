@@ -1,40 +1,23 @@
 {% extends 'blog/base.html' %}
+{% block title %}{{ title }}{% endblock %}
 {% block content %}
 	<div class="container">
 		<header class="blog-wrapper-header">
-			<h1>What's new</h1>
-			<p>Browse all the latest news, tutorials, and insights on coding, entrepreneurship and personal growth.</p>
-			<ul class="category-filters">
-				<li class="active"><a href="{% url 'blog-blog' %}">All</a></li>
-				<li><a href="{% url 'category-web-dev' %}">Web Development</a></li>
-				<li><a href="{% url 'category-web-design' %}">Web Design</a></li>
-				<li><a href="{% url 'category-entrepreneurship' %}">Entrepreneurship</a></li>
-				<li><a href="{% url 'category-philosophy' %}">Philosophy</a></li>
-				<li><a href="{% url 'category-personal-growth' %}">Personal Growth</a></li>
-			</ul>
+			<h1><center>All Guides</center></h1>
+<!-- 			<p class="text-muted">Browse and download all available guides below.</p> -->
+<!-- 			<ul class="category-filters">
+			</ul> -->
 		</header>
-	</div>
-
-	<div class="container">
-		<a class="highlight-post" href="{% url 'post-detail' posts.last.slug %}">
-			<div class="highlight-post-thumbnail">
-				<img src="{{ posts.last.thumbnail.url }}"/>
-			</div>
-			<div class="highlight-post-half-content">
-				<h2>{{ posts.last.title }}</h2>
-				<p>{{ posts.last.snippet | safe }}</p>
-			</div>
-		</a>
 	</div>
 
 	<div class="container">
 		<div class="container-wrapper">
 			{% for post in posts %}
-				<a class="blog-wrapper" href="{% url 'post-detail' post.slug %}">
-				  	<div class="blog-thumbnail">
+				<a class="guide-wrapper" href="{% url 'post-detail' post.slug %}">
+<!-- 				  	<div class="blog-thumbnail">
 		    			<img class="thumbnail" src="{{ post.thumbnail.url }}"/>
-		    		</div>
-		    		<div class="blog-body">
+		    		</div> -->
+		    		<div class="guide-body">
 		    			<h5>{{ post.title }}</h5>
 				    	<p class="article-content">{{ post.snippet|safe }}</p>
 		    		</div>
@@ -61,7 +44,6 @@
 		        	<a class="btn btn-outline-primary" href="?page={{ page_obj.next_page_number }}">Next</a>
 		        	<a class="btn btn-outline-primary" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
 		      	{% endif %}
-
 		    {% endif %}
 		</div>
 	</div>	

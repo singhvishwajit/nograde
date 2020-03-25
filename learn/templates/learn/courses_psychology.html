@@ -1,26 +1,27 @@
 {% extends 'blog/base.html' %}
 {% load static from staticfiles %}
 {% block content %}
+	<header class="courses-wrapper-header">
+		<nav class="category-filters">
+			<div class="container">
+				<a class="nav-item nav-link" href="{% url 'learn-courses' %}">All</a>
+				<a class="nav-item nav-link" href="{% url 'learn-courses-entrepreneurship' %}">Work</a>
+				<a class="nav-item nav-link" href="{% url 'learn-courses-philosophy' %}">Thinking</a>
+				<a class="nav-item nav-link" href="{% url 'learn-courses-psychology' %}">Self-Knowledge</a>
+				<a class="nav-item nav-link" href="{% url 'learn-courses-personal-growth' %}">Personal Growth</a>
+				<a class="nav-item nav-link" href="{% url 'learn-courses-society' %}">Society</a>
+			</div>	
+		</nav>
+	</header>
+	
 	<div class="container">
 		<div class="course-page-wrapper">
-			<header class="courses-wrapper-header">
-				<h2>Courses for navigating life and career.</h2>
-				<ul class="category-filters">
-					<li><a href="{% url 'learn-courses' %}">All</a></li>
-					<li><a href="{% url 'learn-courses-entrepreneurship' %}">Being enterprising</a></li>
-					<li><a href="{% url 'learn-courses-philosophy' %}">Learning how to think</a></li>
-					<li><a href="{% url 'learn-courses-psychology' %}">How are you wired?</a></li>
-					<li><a href="{% url 'learn-courses-personal-growth' %}">Personal Growth</a></li>
-				</ul>
-			</header>
-
-			<h3>How are you wired?</h3>
-			<hr>
+			<h1>Part III : Self-Knowledge</h1>
 			<div class="container-wrapper">
 				{% for course in courses_psychology %}
 					<a class="course-wrapper" href="{% url 'learn-course-details' course.slug %}">
 					  	<div class="course-thumbnail">
-			    			<img class="thumbnail" src="{{ course.thumbnail.url }}"/>
+			    			<img class="thumbnail" src="{{ course.thumbnail.url }}" alt="{{ course.alt_text }}"/>
 			    		</div>
 			    		<div class="course-body">
 			    			<h5>{{ course.course_title }}</h5>
