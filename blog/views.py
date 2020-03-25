@@ -64,6 +64,7 @@ def books(request):
 	'books_entrepreneurship': Books.objects.filter(category=3),
 	'books_philosophy': Books.objects.filter(category=5),
 	'books_psychology': Books.objects.filter(category=6),
+	'books_society': Books.objects.filter(category=7),
 	'title': 'Recommended Books' 
 	}
 	return render(request, 'blog/books.html', context )
@@ -98,7 +99,7 @@ def books_psychology(request):
 
 def books_society(request):
 	context = {
-	'books_society': Books.objects.filter(category=5),
+	'books_society': Books.objects.filter(category=7),
 	'title': 'Society Books'
 	}
 	return render(request, 'blog/books_society.html', context)
