@@ -29,6 +29,7 @@ ul {
 
 .navbar {
   border-bottom: 1px solid rgba(0, 0, 0, .125);
+  height: 5rem;
 }
 
 .bg-steel {
@@ -291,7 +292,7 @@ a.article-title:hover {
   justify-content: space-between;
  /* margin-top: 6rem; */
  /* margin-bottom: 4rem; */
-  margin-top: 3rem;
+  margin-top: 4rem;
 }
 
 .wrapper-welcome-half {
@@ -587,7 +588,7 @@ a.highlight-post {
 
 .courses-wrapper-header {
   position: fixed;
-  top: 3.5rem;
+  top: 5rem;
   right: 0;
   left: 0;
   z-index: 1;

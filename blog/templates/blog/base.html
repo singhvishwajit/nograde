@@ -34,8 +34,8 @@
 		      	<div class="collapse navbar-collapse" id="navbarToggle">
 		        	<div class="navbar-nav mr-auto ml-auto">
 		          		<a class="nav-item nav-link" href="{% url 'blog-about' %}">About</a>
-		          		<a class="nav-item nav-link" href="{% url 'learn-courses' %}">Essays</a>
-		          		<a class="nav-item nav-link" href="{% url 'blog-blog' %}">Guides</a>
+		          		<a class="nav-item nav-link" href="{% url 'all-essays' %}">Essays</a>
+		          		<a class="nav-item nav-link" href="{% url 'blog-guides' %}">Guides</a>
 		          		<a class="nav-item nav-link" href="{% url 'blog-books' %}">Bookstore</a>
 		          		<a class="nav-item nav-link" href="{% url 'blog-newsletter' %}">Newsletter</a>
 		        	</div>
@@ -93,13 +93,13 @@
 						<h5>About Me</h5>
 						<br>
 						<a href="{% url 'blog-about' %}">About</a>
-						<a href="{% url 'learn-courses' %}">Essays</a>
+						<a href="{% url 'all-essays' %}">Essays</a>
 						<a href="{% url 'blog-contact' %}">Contact</a>	
 					</div>
 					<div class="footer-column-three">
 						<h5>Resources</h5>
 						<br>
-						<a href="{% url 'blog-blog' %}">Guides</a>
+						<a href="{% url 'blog-guides' %}">Guides</a>
 						<a href="{% url 'blog-books' %}">Bookstore</a>
 						<a href="{% url 'blog-newsletter' %}">Newsletter</a>
 					</div>

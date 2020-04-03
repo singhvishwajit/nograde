@@ -4,12 +4,12 @@
 	<header class="courses-wrapper-header">
 		<nav class="category-filters">
 			<div class="container">
-				<a class="nav-item nav-link" href="{% url 'learn-courses' %}">All</a>
-				<a class="nav-item nav-link" href="{% url 'learn-courses-entrepreneurship' %}">Work</a>
-				<a class="nav-item nav-link" href="{% url 'learn-courses-philosophy' %}">Thinking</a>
-				<a class="nav-item nav-link" href="{% url 'learn-courses-psychology' %}">Self-Knowledge</a>
-				<a class="nav-item nav-link" href="{% url 'learn-courses-personal-growth' %}">Personal Growth</a>
-				<a class="nav-item nav-link" href="{% url 'learn-courses-society' %}">Society</a>
+				<a class="nav-item nav-link" href="{% url 'all-essays' %}">All</a>
+				<a class="nav-item nav-link" href="{% url 'essays-work' %}">Work</a>
+				<a class="nav-item nav-link" href="{% url 'essays-thinking' %}">Thinking</a>
+				<a class="nav-item nav-link" href="{% url 'essays-self-knowledge' %}">Self-Knowledge</a>
+				<a class="nav-item nav-link" href="{% url 'essays-personal-growth' %}">Personal Growth</a>
+				<a class="nav-item nav-link" href="{% url 'essays-society' %}">Society</a>
 			</div>	
 		</nav>
 	</header>
@@ -19,7 +19,7 @@
 			<h1>Part IV : Personal Growth</h1>
 			<div class="container-wrapper">
 				{% for course in courses_personal_growth %}
-					<a class="course-wrapper" href="{% url 'learn-course-details' course.slug %}">
+					<a class="course-wrapper" href="{% url 'essay-details' course.slug %}">
 					  	<div class="course-thumbnail">
 			    			<img class="thumbnail" src="{{ course.thumbnail.url }}" alt="{{ course.alt_text }}"/>
 			    		</div>

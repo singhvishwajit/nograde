@@ -7,7 +7,7 @@
 				<div class="wrapper-welcome-half">
 					<h1>Essays on the <span class="heading-title">human condition</span>.</h1>
 					<p>Suggestions and tools for navigating life.</p>
-					<a href="{% url 'learn-courses' %}" class="btn btn-dark">Explore essays</a>
+					<a href="{% url 'all-essays' %}" class="btn btn-dark">Explore essays</a>
 				</div>
 				<img class="wrapper-welcome-half-image" src="{% static 'education.jpg' %}" alt="human condition" >
 			</header>
@@ -20,28 +20,28 @@
 			</div>
 			<div class="topics">
 				<div class="feature4">
-					<a class="course-thumbnail" href="{% url 'learn-courses-entrepreneurship' %}">
-						<img class="thumbnail" src="{% static 'noun_entrepreneur.png' %}" alt="work">
+					<a class="course-thumbnail" href="{% url 'essays-work' %}">
+						<img class="thumbnail" src="{% static 'noun_work.png' %}" alt="work">
 					</a>
 					<br>
 					<p><center><strong>Work</strong></center></p>
 				</div>
 				<div class="feature1">
-					<a class="course-thumbnail" href="{% url 'learn-courses-philosophy' %}">
-						<img class="thumbnail" src="{% static 'noun_philosophy.png' %}" alt="thinking">
+					<a class="course-thumbnail" href="{% url 'essays-thinking' %}">
+						<img class="thumbnail" src="{% static 'noun_thinking.png' %}" alt="thinking">
 					</a>
 					<br>
 					<p><center><strong>Thinking</strong></center></p>
 				</div>
 				<div class="feature2">
-					<a class="course-thumbnail" href="{% url 'learn-courses-psychology' %}">
-						<img class="thumbnail" src="{% static 'noun_psychology.png' %}" alt="self-Knowledge">
+					<a class="course-thumbnail" href="{% url 'essays-self-knowledge' %}">
+						<img class="thumbnail" src="{% static 'noun_self_knowledge.png' %}" alt="self-Knowledge">
 					</a>
 					<br>
 					<p><center><strong>Self-Knowledge</strong></center></p>
 				</div>
 				<div class="feature3">
-					<a class="course-thumbnail" href="{% url 'learn-courses-personal-growth' %}">
+					<a class="course-thumbnail" href="{% url 'essays-personal-growth' %}">
 						<img class="thumbnail" src="{% static 'noun_personal_growth.png' %}" alt="personal growth">
 					</a>
 					<br>

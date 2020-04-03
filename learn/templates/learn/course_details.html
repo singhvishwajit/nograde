@@ -4,12 +4,12 @@
 	<header class="courses-wrapper-header">
 		<nav class="category-filters">
 			<div class="container">
-				<a class="nav-item nav-link" href="{% url 'learn-courses' %}">All</a>
-				<a class="nav-item nav-link" href="{% url 'learn-courses-entrepreneurship' %}">Work</a>
-				<a class="nav-item nav-link" href="{% url 'learn-courses-philosophy' %}">Thinking</a>
-				<a class="nav-item nav-link" href="{% url 'learn-courses-psychology' %}">Self-Knowledge</a>
-				<a class="nav-item nav-link" href="{% url 'learn-courses-personal-growth' %}">Personal Growth</a>
-				<a class="nav-item nav-link" href="{% url 'learn-courses-society' %}">Society</a>
+				<a class="nav-item nav-link" href="{% url 'all-essays' %}">All</a>
+				<a class="nav-item nav-link" href="{% url 'essays-work' %}">Work</a>
+				<a class="nav-item nav-link" href="{% url 'essays-thinking' %}">Thinking</a>
+				<a class="nav-item nav-link" href="{% url 'essays-self-knowledge' %}">Self-Knowledge</a>
+				<a class="nav-item nav-link" href="{% url 'essays-personal-growth' %}">Personal Growth</a>
+				<a class="nav-item nav-link" href="{% url 'essays-society' %}">Society</a>
 			</div>	
 		</ul>
 	</header>
@@ -22,7 +22,7 @@
 				<div class="share">
 					<h4>Share:</h4>
 					<div class="twitter">
-						<a href="https://twitter.com/intent/tweet?text={{ course.course_title }} https://vishwajitsingh.com{% url 'learn-course-details' course.slug %}" target="_blank">
+						<a href="https://twitter.com/intent/tweet?text={{ course.course_title }} https://vishwajitsingh.com{% url 'essay-details' course.slug %}" target="_blank">
 					    	<i class="fab fa-twitter fa-2x"></i> 
 						</a> 
 						<p>Tweet</p>
