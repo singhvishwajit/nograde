@@ -362,29 +362,12 @@ a.article-title:hover {
   font-weight: bold;
 }
 
-.feature1 {
+.feature {
   text-align: center;
   /* width: 24%; */
   width: 100%;
 
 }
-
-.feature2 {
-  /* width: 24%; */
-  text-align: center;
-  width: 100%;
-}
-
-.feature3 {
-  width: 100%;
-  text-align: center;
-}
-
-.feature4 {
-  width: 100%;
-  text-align: center;
-}
-
 
 /******************** Blog Page ********************/
 
