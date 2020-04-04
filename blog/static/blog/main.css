@@ -325,7 +325,7 @@ a.article-title:hover {
   background-size: cover;
   /* width: 50%; */
   width: 100%;
-  height: 42.5vh;
+  height: 40vh;
  /* height: 36rem; */
 } 
 
@@ -583,7 +583,7 @@ a.highlight-post {
   color: #3d3e44;
   line-height: 1.25;
   font-color: #3d3e44;
-
+  margin-top: 11rem;
 }
 
 .courses-wrapper-header {
