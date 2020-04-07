@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views.generic import ListView, DetailView, CreateView
 from .models import Post, Contact, Books, Newsletter
-from learn.models import Path
+from learn.models import Category
 
 # Create your views here.
 
@@ -60,47 +60,48 @@ def about(request):
 
 def books(request):
 	context = {
-	'books_personal_growth': Books.objects.filter(category=2),
-	'books_entrepreneurship': Books.objects.filter(category=3),
-	'books_philosophy': Books.objects.filter(category=5),
-	'books_psychology': Books.objects.filter(category=6),
-	'books_society': Books.objects.filter(category=7),
+	'books_work': Books.objects.filter(categories=1),
+	'books_thinking': Books.objects.filter(categories=2),
+	'books_self_knowledge': Books.objects.filter(categories=3),
+	'books_personal_growth': Books.objects.filter(categories=4),
+	'books_society': Books.objects.filter(categories=5),
 	'title': 'Recommended Books' 
 	}
 	return render(request, 'blog/books.html', context )
 
-def books_entrepreneurship(request):
+def books_work(request):
 	context = {
-	'books_entrepreneurship': Books.objects.filter(category=3),
-	'title': 'Entrepreneurship Books'
+	'books_work': Books.objects.filter(categories=1),
+	'title': 'Books on Work'
 	}
-	return render(request, 'blog/books_entrepreneurship.html', context)
+	return render(request, 'blog/books_work.html', context)
+
+def books_thinking(request):
+	context = {
+	'books_thinking': Books.objects.filter(categories=2),
+	'title': 'Books on Thinking'
+	}
+	return render(request, 'blog/books_thinking.html', context)
+
+
+def books_self_knowledge(request):
+	context = {
+	'books_self_knowledge': Books.objects.filter(categories=3),
+	'title': 'Books on Self-Knowledge'
+	}
+	return render(request, 'blog/books_self_knowledge.html', context)
 
 def books_personal_growth(request):
 	context = {
-	'books_personal_growth': Books.objects.filter(category=2),
-	'title': 'Personal Growth Books'
+	'books_personal_growth': Books.objects.filter(categories=4),
+	'title': 'Books on Personal Growth'
 	}
 	return render(request, 'blog/books_personal_growth.html', context)
 
-def books_philosophy(request):
-	context = {
-	'books_philosophy': Books.objects.filter(category=5),
-	'title': 'Philosophy Books'
-	}
-	return render(request, 'blog/books_philosophy.html', context)
-
-def books_psychology(request):
-	context = {
-	'books_psychology': Books.objects.filter(category=6),
-	'title': 'Psychology Books'
-	}
-	return render(request, 'blog/books_psychology.html', context)
-
 def books_society(request):
 	context = {
-	'books_society': Books.objects.filter(category=7),
-	'title': 'Society Books'
+	'books_society': Books.objects.filter(categories=5),
+	'title': 'Books on Society'
 	}
 	return render(request, 'blog/books_society.html', context)
 

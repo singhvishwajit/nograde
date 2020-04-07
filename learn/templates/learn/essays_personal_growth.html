@@ -14,21 +14,20 @@
 		</nav>
 	</header>
 
-
 	<div class="container">
 		<div class="course-page-wrapper">
-			<h1>Part II : Thinking</h1>
+			<h1>Part IV : Personal Growth</h1>
 			<div class="container-wrapper">
-				{% for course in courses_philosophy %}
-					<a class="course-wrapper" href="{% url 'essay-details' course.slug %}">
+				{% for essay in essays_personal_growth %}
+					<a class="course-wrapper" href="{% url 'essay-details' essay.slug %}">
 					  	<div class="course-thumbnail">
-			    			<img class="thumbnail" src="{{ course.thumbnail.url }}" alt="{{ course.alt_text }}"/>
+			    			<img class="thumbnail" src="{{ essay.thumbnail.url }}" alt="{{ essay.alt_text }}"/>
 			    		</div>
 			    		<div class="course-body">
-			    			<h5>{{ course.course_title }}</h5>
-					    	<p class="article-content">{{ course.course_details|safe }}</p>
+			    			<h5>{{ essay.essay_title }}</h5>
+					    	<p class="article-content">{{ essay.essay_details|safe }}</p>
 			    		</div>
-					</a>
+					 </a>
 				{% endfor %}
 			</div>
 		</div>

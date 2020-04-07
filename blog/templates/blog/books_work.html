@@ -9,14 +9,14 @@
 						    <li class="">
 						        <a href="{% url 'blog-books' %}" class="ga-track">All<span>›</span></a>
 						    </li>
-						    <li class="">
-						        <a href="{% url 'blog-books-entrepreneurship' %}" class="ga-track">Entrepreneurship<span>›</span></a>
+						    <li class="active-tab">
+						        <a href="{% url 'blog-books-work' %}" class="ga-track">Work<span>›</span></a>
 						    </li>
 						    <li class="">
-						        <a href="{% url 'blog-books-philosophy' %}" class="ga-track">Philosophy<span>›</span></a>
+						        <a href="{% url 'blog-books-thinking' %}" class="ga-track">Thinking<span>›</span></a>
 						    </li>					    
-						    <li class="active-tab">
-						        <a href="{% url 'blog-books-psychology' %}" class="ga-track">Psychology<span>›</span></a>
+						    <li class="">
+						        <a href="{% url 'blog-books-self-knowledge' %}" class="ga-track">Self-Knowledge<span>›</span></a>
 						    </li>					    
 						    <li class="">
 						        <a href="{% url 'blog-books-personal-growth' %}" class="ga-track">Personal Growth<span>›</span></a>
@@ -27,10 +27,11 @@
 						</ul>
 					</div>
 				</div>	
+
 				<div class="books-page-wrapper">
-					<h1><center>Psychology</center></h1>
+					<h1><center>Work</center></h1>
 					<div class="books-container-wrapper">
-						{% for books in books_psychology %}
+						{% for books in books_work %}
 							<a class="books-wrapper" href="{{ books.amazon_url }}">
 					    		<img class="thumbnail" src="{{ books.thumbnail.url }}" alt="{{ books.alt_text }}"/>
 		<!-- 			    		<div class="books-body">
@@ -40,7 +41,6 @@
 							</a>
 						{% endfor %}
 					</div>
-					<p>Note: VS OPC Pvt. Ltd. participates in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn commissions by linking to Amazon.</p>
 				</div>
 			</div>
 		</div>

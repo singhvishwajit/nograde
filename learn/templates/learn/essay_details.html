@@ -15,14 +15,14 @@
 	</header>
 
 	<article>
-		<img class="course-banner" src="{{ course.thumbnail.url }}" alt="{{ course.alt_text }}"/>
-		<h1 class="essay-title">{{ course.course_title }}</h1>
+		<img class="course-banner" src="{{ essay.thumbnail.url }}" alt="{{ essay.alt_text }}"/>
+		<h1 class="essay-title">{{ essay.essay_title }}</h1>
 		<div class="container">
 			<div class="course-detail-body">
 				<div class="share">
 					<h4>Share:</h4>
 					<div class="twitter">
-						<a href="https://twitter.com/intent/tweet?text={{ course.course_title }} https://vishwajitsingh.com{% url 'essay-details' course.slug %}" target="_blank">
+						<a href="https://twitter.com/intent/tweet?text={{ essay.essay_title }} https://vishwajitsingh.com{% url 'essay-details' essay.slug %}" target="_blank">
 					    	<i class="fab fa-twitter fa-2x"></i> 
 						</a> 
 						<p>Tweet</p>
@@ -44,7 +44,7 @@
 			      	<br>
 				</div>
 				<div class="course-content">
-					{{ course.course_content | safe}}
+					{{ essay.essay_content | safe}}
 				</div>
 			</div>
 		</div>

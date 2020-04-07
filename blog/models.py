@@ -1,7 +1,7 @@
 from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
-from learn.models import Path
+from learn.models import Category
 from django.urls import reverse
 
 # Create your models here.
@@ -9,7 +9,7 @@ class Post(models.Model):
 	title = models.CharField(max_length=100)
 	content = models.TextField()
 	slug = models.SlugField(default="some-string")
-	category = models.ManyToManyField(Path, blank=True)
+	categories = models.ManyToManyField(Category, blank=True)
 	date_posted = models.DateTimeField(default=timezone.now)
 	author = models.ForeignKey(User, on_delete=models.CASCADE)
 	thumbnail = models.ImageField(default='default.png', blank=True)
@@ -37,7 +37,7 @@ class Books(models.Model):
 	title = models.CharField(max_length=100)
 	author = models.CharField(max_length=100)
 	thumbnail = models.ImageField(default='default.png', blank=True)
-	category = models.ManyToManyField(Path, blank=True)
+	categories = models.ManyToManyField(Category, blank=True)
 	details = models.TextField()
 	amazon_url = models.URLField(default='google.com')
 	alt_text = models.TextField(default="some-string")

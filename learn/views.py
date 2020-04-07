@@ -1,56 +1,59 @@
 from django.shortcuts import render
-from .models import Course, Path
+from .models import Essay, Category
 	
-def courses(request):
+def essays(request):
 	context = {
-	'courses_personal_growth': Course.objects.filter(paths=2),
-	'courses_entrepreneurship': Course.objects.filter(paths=3),
-	'courses_philosophy': Course.objects.filter(paths=5),
-	'courses_psychology': Course.objects.filter(paths=6),
-	'courses_society': Course.objects.filter(paths=7),
-	'courses': Course.objects.all(),
+	'essays': Essay.objects.all(),
+	'essays_work': Essay.objects.filter(categories=1),
+	'essays_thinking': Essay.objects.filter(categories=2),
+	'essays_self_knowledge': Essay.objects.filter(categories=3),
+	'essays_personal_growth': Essay.objects.filter(categories=4),
+	'essays_society': Essay.objects.filter(categories=5),
 	'title': 'All Essays' 
 	}
-	return render(request, 'learn/courses.html', context)	
+	return render(request, 'learn/essays.html', context)	
 
-def course_details(request, slug):
+def essays_work(request):
 	context = {
-	'course': Course.objects.get(slug=slug),
-	'title': Course.objects.get(slug=slug).course_title,
-	}
-	return render(request, 'learn/course_details.html', context)
-
-def courses_entrepreneurship(request):
-	context = {
-	'courses_entrepreneurship': Course.objects.filter(paths=3),
+	'essays_work': Essay.objects.filter(categories=1),
 	'title': 'Essays on Work'
 	}
-	return render(request, 'learn/courses_entrepreneurship.html', context)
+	return render(request, 'learn/essays_work.html', context)
 
-def courses_personal_growth(request):
+def essays_thinking(request):
 	context = {
-	'courses_personal_growth': Course.objects.filter(paths=2),
-	'title': 'Essays on Personal Growth'
-	}
-	return render(request, 'learn/courses_personal_growth.html', context)
-
-def courses_philosophy(request):
-	context = {
-	'courses_philosophy': Course.objects.filter(paths=5),
+	'essays_thinking': Essay.objects.filter(categories=2),
 	'title': 'Essays on Thinking'
 	}
-	return render(request, 'learn/courses_philosophy.html', context)
+	return render(request, 'learn/essays_thinking.html', context)
 
-def courses_psychology(request):
+def essays_self_knowledge(request):
 	context = {
-	'courses_psychology': Course.objects.filter(paths=6),
+	'essays_self_knowledge': Essay.objects.filter(categories=3),
 	'title': 'Essays on Self-Knowledge'
 	}
-	return render(request, 'learn/courses_psychology.html', context)
+	return render(request, 'learn/essays_self_knowledge.html', context)
 
-def courses_society(request):
+def essays_personal_growth(request):
 	context = {
-	'courses_society': Course.objects.filter(paths=7),
+	'essays_personal_growth': Essay.objects.filter(categories=4),
+	'title': 'Essays on Personal Growth'
+	}
+	return render(request, 'learn/essays_personal_growth.html', context)
+
+def essays_society(request):
+	context = {
+	'essays_society': Essay.objects.filter(categories=5),
 	'title': 'Essays on Society'
 	}
-	return render(request, 'learn/courses_society.html', context)
+	return render(request, 'learn/essays_society.html', context)
+
+def essay_details(request, slug):
+	context = {
+	'essay': Essay.objects.get(slug=slug),
+	'title': Essay.objects.get(slug=slug).essay_title,
+	}
+	return render(request, 'learn/essay_details.html', context)
+
+
+
