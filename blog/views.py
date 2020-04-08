@@ -48,12 +48,16 @@ def ContactSuccess(request):
 class NewsletterCreateView(CreateView):
 	model = Newsletter
 	fields = ['email']
+	success_url ='subscribed'
 	def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context
         	context = super().get_context_data(**kwargs)
         # Add in a QuerySet of all the books
         	context['title'] = 'Newsletter'
         	return context
+
+def NewsletterSubscribed(request):
+	return render(request, 'blog/newsletter_subscribed.html')
 
 def about(request):
 	return render(request, 'blog/about.html', {'title': 'About'})

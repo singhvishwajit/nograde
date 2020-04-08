@@ -18,5 +18,6 @@ urlpatterns = [
 	path('books/self-knowledge', views.books_self_knowledge, name='blog-books-self-knowledge'),
 	path('books/society', views.books_society, name='blog-books-society'),
 	path('newsletter/', NewsletterCreateView.as_view(), name='blog-newsletter'),
+	path('newsletter/subscribed', views.NewsletterSubscribed, name='blog-newsletter-subscribed'),
 ]
 

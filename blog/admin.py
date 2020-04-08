@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Post, Contact, Books
+from .models import Post, Contact, Books, Newsletter
 from tinymce.widgets import TinyMCE
 from django.db import models
 
@@ -22,3 +22,4 @@ class PostAdmin(admin.ModelAdmin):
 admin.site.register(Post, PostAdmin)
 admin.site.register(Contact)
 admin.site.register(Books)
+admin.site.register(Newsletter)
