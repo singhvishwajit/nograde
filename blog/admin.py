@@ -11,7 +11,6 @@ class PostAdmin(admin.ModelAdmin):
         ("Content", {"fields": ["content"]}),
         ("Slug", {"fields": ["slug"]}),
         ("Author", {"fields": ["author"]}),
-        ("Category", {"fields": ["category"]}),
         ("Thumbnail", {"fields": ["thumbnail"]})
     ]
 
